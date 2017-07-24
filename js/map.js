@@ -5,18 +5,19 @@ var cartodbLayer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{
 }).addTo(map);
 
 function popup(feature, layer) { 
-	if (feature.properties) 
-	{
-            layer.bindPopup("");
-	} 
+    if (feature.properties.nombre) 
+    {
+        layer.bindPopup("<strong>"+feature.properties.nombre+"</strong>");
+    } 
 }
 
 var ciudades = L.geoJson(null, {
-	onEachFeature: popup
+    onEachFeature: popup
 });
 
 $.getJSON("./js/ciudades.geojson", function (data) {
-	ciudades.addData(data);
+    console.log(data);
+    ciudades.addData(data);
 });
 
 ciudades.addTo(map);
