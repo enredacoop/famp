@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" media="screen">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.print.css" media="screen">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="css/font-awesome.css" />
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -42,6 +44,26 @@
    </head>
    <body>
     <div class="navbar navbar-default navbar-fixed-top">
+      <div class="row" id="secondary-menu">
+        <div class="col-md-2 col-md-offset-3" id="boletin">
+          <a href="#" id="open-popup">Boletín Electrónico</a>
+        </div>
+        <div class="col-md-2">
+          <a href="http://www.juntadeandalucia.es/organismos/igualdadypoliticassociales.html" target="_blank">Conserjería de Igualdad y Políticas Sociales</a>
+        </div>
+        <div class="col-md-3">
+          <a href="http://www.famp.es/" target="_blank">Federación Andaluza de Municipios y Provincias</a>
+        </div>
+        <div class="col-md-2 social-icons">
+          <a href="https://www.facebook.com/foroandaluzgobiernoslocalesyprocesosparticipativos/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+          <a href="https://twitter.com/ForoAndGLyPP" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="mailto:foroandaluzparticipacion@gmail.com"><i class="fa fa-envelope"></i></a>
+          <a href="#"><i class="fa fa-rss"></i></a>
+        </div>
+      </div>
+      <hr/>
+
+      <div class="container">
       <div class="col-md-2">
         <div class="navbar-header">
           <a href="./index.html"><img src="./images/logo.png"></a>
@@ -51,48 +73,49 @@
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav">
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="index.html" id="themes">Proyecto FORO<span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Proyecto FORO<span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a href="./objetivos.html">Objetivos del proyecto</a></li>
+                <li><a href="#objetivos">Objetivos del proyecto</a></li>
               </ul>
             </li>
-            <li>
-              <a href="./anteproyecto.html">Anteproyecto de Ley</a>
+            <li id="anteproyecto-main">
+              <a href="#anteproyecto">Anteproyecto de Ley</a>
             </li>
             <li>
-              <a href="#">Ciudades Piloto</a>
+              <a href="#mapa">Grupos Motores</a>
             </li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Sesiones de trabajo <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a href="./calendario.html">Calendario</a></li>
+                <li><a href="#calendario">Sesión 1</a></li>
+                <li><a href="#calendario">Sesión 2</a></li>
+                <li><a href="#calendario">Sesión 3</a></li>
+                <li><a href="#calendario">Sesión 4</a></li>
+                <li><a href="#calendario">Sesión Virtual</a></li>
+                <li class="divider"></li>
+                <li><a href="#calendario">Calendario</a></li>
               </ul>
             </li>
             <li>
-              <a href="./laboratorio.html">Laboratorio participativo</a>
+              <a href="#laboratorio">Laboratorio participativo</a>
             </li>
             <li>
-              <a href="#">Banco de experiencias </a>
-            </li>
-            <li>
-              <a href="#">Boletín Electrónico</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
+              <a href="#experiencias">Banco de experiencias </a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-
+</div>
 
 
     <div id="presentacion">
       <div class="container" id="wrapper">
 
         <div class="row">
-          <div class="col-sm-12 text-center">
-            <h1>Foro Andaluz de Gobiernos Locales y Procesos Participativos</h1>
+          <div class="col-sm-12">
+            <h2>Foro Andaluz de Gobiernos Locales y Procesos Participativos</h2>
+            <hr/>
           </div>
         </div>
 
@@ -115,8 +138,9 @@
 
     <div class="section" id="objetivos">
       <div class="container">
-        <div class="row text-center">
-          <h1>Objetivos del proyecto</h1>
+        <div class="row">
+          <h2>Objetivos del proyecto</h2>
+          <hr/>
         </div>
         <div class="col-md-6">
           <p>Este proyecto que se llevará a cabo con una metodología de Investigación-Acción-Participación, se articulará en torno a Formación Específica, Capacitación Política y Promoción de Procesos Participativos a través de los Encuentros y Sesiones de Trabajo previstas en los mismos.</p>
@@ -136,8 +160,9 @@
 
     <div class="section" id="anteproyecto">
      <div class="container">
-      <div class="row text-center">
-        <h1>Anteproyecto de Ley</h1>
+      <div class="row">
+        <h2>Anteproyecto de Ley</h2>
+        <hr/>
       </div>
       <p>Tal y como queda de manifiesto en la Exposición de Motivos: “La democracia representativa ha supuesto un avance histórico respecto a otros sistemas políticos;....sin embargo, parece estar asentándose la idea de que la elección de nuestros representantes, a través de la emisión del voto una vez cada cuatro años, es un elemento necesario pero insuficiente. El impulso de formas directas de participación ciudadana que complementen las instituciones representativas se ha convertido en una demanda social de primera magnitud como se viene poniendo de manifiesto en los últimos tiempos.” </p>
       <p>La participación ciudadana en los asuntos públicos es un derecho constitucional de la ciudadanía y un mandato imperativo que la Constitución dicta a los poderes públicos, así el Art. 9.2 establece que corresponde a los poderes públicos “facilitar la participación de todos los ciudadanos en la vida política, económica, cultural y social”. Como derecho, es necesario regularla generando mecanismos que posibiliten su ejercicio. </p>
@@ -151,7 +176,7 @@
 
   <div class="section" id="mapa">
     <div class="row">
-      <div class="col-sm-12 text-center">
+      <div class="col-sm-12">
         <div id="map"></div>
       </div>
     </div>
@@ -159,7 +184,11 @@
 
   <div class="section" id="calendario">
     <div class="row">
-      <div class="container text-center">
+      <div class="container">
+        <div class="row">
+          <h2>Calendario</h2>
+          <hr/>
+        </div>      
         <div id='calendar'></div>
       </div>
     </div>
@@ -167,126 +196,336 @@
 
   <div class="section" id="laboratorio">
     <div class="container">
-      <div class="row text-center">
-        <h1>Laboratorio participativo</h1>
+      <div class="row">
+        <h2>Laboratorio participativo</h2>
+        <hr/>
       </div>
       <div class="col-md-4">
-        <img src="./images/laboratorio.jpg" />
+        <img src="./images/laboratorio.png" />
       </div>
       <div class="col-md-6 col-md-offset-2">
-        <p>El laboratorio es un espacio de interactuación abierto que unirá a los miembros de las 16 ciudades piloto y que les permitirá debatir, reflexionar, validar y tomar decisiones acerca de la adopción de medidas y políticas necesarias de participación ciudadana y gobierno abierto.</p>
+        <p>El Laboratorio Participativo para el Gobierno Abierto y la Participación Ciudadana laboratorio se convertirá en es un espacio de interactuación abierto que unirá a los miembros de loas 16 Grupos Motoresciudades piloto y que les permitirá debatir, reflexionar, validar y tomar decisiones acerca de la adopción de medidas y políticas necesarias de participación ciudadana y gobierno abierto.</p>
+
+        <p>El Laboratorio Participativo para el Gobierno Abierto y la Participación Ciudadana forma parte del Observatorio Andaluz de la Participación Ciudadana. Un espacio abierto a través de Internet a todos los Gobiernos Locales de Andalucía y que constituye una herramienta útil y flexible que permite conocer, intercambiar y aplicar experiencias a propósito de la Participación Ciudadana y el movimiento voluntario en el ámbito local de nuestra Comunidad Autónoma a fin de:</p>
+
+        <ul>
+          <li>Profundizar en la democracia participativa</li>
+          <li>Promover la integración de la ciudadanía en la planificación y la gestión desde los Gobiernos Locales</li>
+          <li>Favorecer e incrementar los niveles de participación y proximidad democrática de la sociedad andaluza</li>
+        </ul>
       </div>
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 logo">
-          <img src="./images/conserjeria.png">
-        </div>
-        <div class="col-md-3" id="links">
-          <ul>
-            <li><img src="./images/facebook.svg" />Facebook</li>
-            <li><img src="./images/twitter.svg" />Twitter</li>
-          </ul>
-        </div>
-        <div class="col-md-3" id="links">
-          <li><img src="./images/email.svg" />Email</li>
-          <a href="#"><img src="./images/rss.svg" />Newsletter </a>
-        </div>
-        <div class="col-md-3 logo">
-          <img src="./images/famp.jpg">
-        </div>
+  <div class="section" id="experiencias">
+   <div class="container">
+    <div class="row">
+      <h2>Banco de experiencias</h2>
+      <hr/>
+    </div>
+    <p><a href="http://www.parlamentodeandalucia.es/webdinamica/portal-web-parlamento/pdf.do?tipodoc=bopa&id=117057">Proyecto de ley</a></p>
+    <p><a href="http://www.famp.es/racs/observatorio/MATERIAL/Libro_blanco_gobernanza_CAST.pdf">Libro Blanco Gobernanza Multinivel</a></p>
+    <p><a href="http://www.famp.es/racs/observatorio/MATERIAL/Libro_Blanco_Gobierno_Local.pdf">Libro Blanco Gobierno Local</a></p>
+    <p><a href="http://www.parlamentodeandalucia.es/webdinamica/portal-web-parlamento/actividadparlamentaria/tramitacionencurso/legislativas.do?numexp=10-16/PL-000005">Proceso de tramitación parlamentaria</a></p>
+    <a href="http://www.famp.es/racs/observatorio/docinteres.php">Otros documentos de interés</a></p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row" id="links">
+      <div class="col-md-2 logo">
+        <img src="./images/consejeria.png">
       </div>
-      <div class="row">
-        <p>© 2016 Federación Andaluza de Municipios y Provincias</p>
+      <div class="col-md-2 logo">
+        <img src="./images/famp.png">
+      </div>
+      <div class="col-md-2 logo">
+        <img src="./images/logo.png">
+      </div>
+      <div class="col-md-6 social-icons">
+        <ul>
+          <li><a href="https://www.facebook.com/foroandaluzgobiernoslocalesyprocesosparticipativos/" target="_blank"><i class="fa fa-facebook-official"></i> Foro Andaluz de Gobiernos Locales y Procesos Participativos</a></li>
+          <li><a href="https://twitter.com/ForoAndGLyPP" target="_blank"><i class="fa fa-twitter"></i> @ForoAndGLyPP </a></li>
+          <li><a href="#"><i class="fa fa-rss"></i> Boletín Electrónico</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+    <div class="row">
+      <p>© 2016 Federación Andaluza de Municipios y Provincias</p>
+    </div>
+  </div>
+</footer>
 
-  <script src="./js/map.js"></script>
-  <script>
+<script src="./js/map.js"></script>
+<script>
 
-    $(document).ready(function() {
+  $(document).ready(function() {
 
-      $('#calendar').fullCalendar({
-        header: {
-          left: 'prev,next',
-          center: 'title',
-          right: 'month,basicWeek,basicDay'
-        },
-        defaultDate: '2017-08-12',
-        locale: 'es',
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'month,basicWeek,basicDay'
+      },
+      defaultDate: '2017-09-01',
+      locale: 'es',
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       eventLimit: true, // allow "more" link when too many events
       events: [
       {
-        title: 'All Day Event',
-        start: '2017-08-01'
+        title: 'Jerez',
+        start: '2017-09-13'
       },
       {
-        title: 'Long Event',
-        start: '2017-08-07',
-        end: '2017-08-10'
+        title: 'Cádiz',
+        start: '2017-09-14',
       },
       {
-        id: 999,
-        title: 'Repeating Event',
-        start: '2017-08-09T16:00:00'
+        title: 'Adra',
+        start: '2017-09-19'
       },
       {
-        id: 999,
-        title: 'Repeating Event',
-        start: '2017-08-16T16:00:00'
+        title: 'Almeria',
+        start: '2017-09-20'
       },
       {
-        title: 'Conference',
-        start: '2017-08-11',
-        end: '2017-08-13'
+        title: 'Roquetas de Mar',
+        start: '2016-09-21',
       },
       {
-        title: 'Meeting',
-        start: '2017-08-12T10:30:00',
-        end: '2017-08-12T12:30:00'
+        title: 'Nerja',
+        start: '2017-09-26',
       },
       {
-        title: 'Lunch',
-        start: '2017-08-12T12:00:00'
+        title: 'Málaga',
+        start: '2017-09-27'
       },
       {
-        title: 'Meeting',
-        start: '2017-08-12T14:30:00'
+        title: 'Córdoba',
+        start: '2017-09-12'
       },
       {
-        title: 'Happy Hour',
-        start: '2017-08-12T17:30:00'
+        title: 'Palma del Río',
+        start: '2017-09-14'
       },
       {
-        title: 'Dinner',
-        start: '2017-08-12T20:00:00'
+        title: 'Martos',
+        start: '2017-09-13'
       },
       {
-        title: 'Birthday Party',
-        start: '2017-08-13T07:00:00'
+        title: 'Linares',
+        start: '2017-09-18'
       },
       {
-        title: 'Click for Google',
-        url: 'http://google.com/',
-        start: '2017-08-28'
+        title: 'Granada',
+        start: '2017-09-19'
       },
       {       
-        title: 'Click for Google',
-        url: 'http://google.com/',
-        start: '2017-06-01'
-      }
-
+        title: 'Maracena',
+        start: '2017-09-18'
+      },
+      {       
+        title: 'Sevilla',
+        start: '2017-09-20'
+      },
+      {       
+        title: 'Huelva',
+        start: '2017-09-19'
+      },
+      {       
+        title: 'Ayamonte',
+        start: '2017-09-18'
+      },
+      {       
+        title: 'Nerja',
+        start: '2017-10-10'
+      },
+      {       
+        title: 'Málaga',
+        start: '2017-10-11'
+      },
+      {       
+        title: 'Córdoba',
+        start: '2017-10-03'
+      },
+      {       
+        title: 'Palma del Río',
+        start: '2017-10-05'
+      },      
+      {       
+        title: 'Martos',
+        start: '2017-10-04'
+      },
+      {       
+        title: 'Linares',
+        start: '2017-10-09'
+      },
+      {       
+        title: 'Granada',
+        start: '2017-10-05'
+      },
+      {       
+        title: 'Maracena',
+        start: '2017-10-06'
+      },
+      {       
+        title: 'Sevilla',
+        start: '2017-10-04'
+      },
+      {       
+        title: 'Huelva',
+        start: '2017-10-03'
+      },
+      {       
+        title: 'Ayamonte',
+        start: '2017-10-03'
+      },
+      {       
+        title: 'Jerez',
+        start: '2017-10-18'
+      },
+      {       
+        title: 'Cádiz',
+        start: '2017-10-18'
+      },
+      {       
+        title: 'Adra',
+        start: '2017-10-24'
+      },
+      {       
+        title: 'Almería',
+        start: '2017-10-25'
+      },
+      {       
+        title: 'Almería',
+        start: '2017-10-25'
+      },
+      {       
+        title: 'Roquetas de Mar',
+        start: '2017-10-26'
+      },
+      {       
+        title: 'Nerja',
+        start: '2017-10-18'
+      },
+      {       
+        title: 'Málaga',
+        start: '2017-10-19'
+      },
+      {       
+        title: 'Córdoba',
+        start: '2017-10-16'
+      },
+      {       
+        title: 'Palma del Río',
+        start: '2017-10-18'
+      },
+      {       
+        title: 'Martos',
+        start: '2017-10-17'
+      },
+      {       
+        title: 'Linares',
+        start: '2017-10-20'
+      },
+      {       
+        title: 'Granada',
+        start: '2017-10-19'
+      },
+      {       
+        title: 'Maracena',
+        start: '2017-10-18'
+      },
+      {       
+        title: 'Sevilla',
+        start: '2017-10-25'
+      },
+      {       
+        title: 'Huelva',
+        start: '2017-10-24'
+      },
+      {       
+        title: 'Ayamonte',
+        start: '2017-10-24'
+      },
+      {       
+        title: 'Jerez',
+        start: '2017-11-15'
+      },
+      {       
+        title: 'Cádiz',
+        start: '2017-11-16'
+      },
+      {       
+        title: 'Adra',
+        start: '2017-11-14'
+      },
+      {       
+        title: 'Almería',
+        start: '2017-11-15'
+      },
+      {       
+        title: 'Roquetas de Mar',
+        start: '2017-11-16'
+      },
+      {       
+        title: 'Nerja',
+        start: '2017-11-13'
+      },
+      {       
+        title: 'Málaga',
+        start: '2017-11-17'
+      },
+      {       
+        title: 'Córdoba',
+        start: '2017-11-14'
+      },
+      {       
+        title: 'Palma del Río',
+        start: '2017-11-13'
+      },
+      {       
+        title: 'Martos',
+        start: '2017-11-17'
+      },
+      {       
+        title: 'Linares',
+        start: '2017-11-16'
+      },
+      {       
+        title: 'Granada',
+        start: '2017-11-14'
+      },
+      {       
+        title: 'Maracena',
+        start: '2017-11-15'
+      },
+      {       
+        title: 'Sevilla',
+        start: '2017-11-15'
+      },
+      {       
+        title: 'Huelva',
+        start: '2017-11-14'
+      },
+      {       
+        title: 'Ayamonte',
+        start: '2017-11-14'
+      }   
       ]
     });
 
-    });
+  });
+</script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 
-  </script>
+<script>
+  function showMailingPopUp() {
+    require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"e28c376c0650e07ac18bdcdbe","lid":"6e377db387"}) })
+  };
 
-  </html>
+  document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
+</script>
+</html>
