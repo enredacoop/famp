@@ -30,7 +30,7 @@ var ciudades = L.geoJson(null, {
     pointToLayer: styledPoints
 });
 
-$.getJSON("./js/ciudades.geojson", function (data) {
+$.getJSON("./data/ciudades.geojson", function (data) {
     ciudades.addData(data);
 });
 
