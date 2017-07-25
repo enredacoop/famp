@@ -244,6 +244,10 @@ h1{
 		background-color: #3a9ed0;
 	}
 	.navbar-default .navbar-nav > .open > a {
-	color: #ffffff !important;
-}
+		color: #ffffff !important;
+	}
+	img {
+		max-width: 80%;
+		margin-left: 10%;
+	}
 }
