@@ -53,6 +53,11 @@ h1{
 	border-top: 2px solid #ac5291;
 }
 
+#metodologia hr{
+	margin-top: -3px;
+	border-top: 2px solid #3a9ed0;
+}
+
 #wrapper {
     padding: 40px 0px;
 }
