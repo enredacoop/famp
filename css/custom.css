@@ -62,7 +62,9 @@ h1{
 	margin-top: -3px;
 	border-top: 2px solid #ac5291;
 }
-
+#programa li{
+	list-style: none;
+}
 #metodologia hr{
 	margin-top: -3px;
 	border-top: 2px solid #3a9ed0;
@@ -204,6 +206,7 @@ h1{
 
 .footer #links .social-icons i{
 	font-size: 16px;
+	margin-right: 10px;
 }
 
 .footer #links .social-icons a:hover{
@@ -213,13 +216,20 @@ h1{
 	color: #7f7f7f;
 	font-size: 14px;
 }
+
 /* CALENDAR */
 
 #calendar {
-		max-width: 900px;
-		margin: 0 auto;
-	}
+	margin: 0 auto;
+}
 
+#calendar .fc-row {
+	min-height: 10em !important;
+}
+
+#calendar .fc-day-grid-event .fc-content {
+	white-space: normal;
+}
 .fc-button-group, .fc button {
 	display: block !important;
 }
