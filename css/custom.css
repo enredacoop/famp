@@ -58,6 +58,11 @@ h1{
 	border-top: 2px solid #ac5291;
 }
 
+#programa hr{
+	margin-top: -3px;
+	border-top: 2px solid #ac5291;
+}
+
 #metodologia hr{
 	margin-top: -3px;
 	border-top: 2px solid #3a9ed0;
@@ -111,6 +116,12 @@ h1{
 
 .navbar-nav #anteproyecto-main {
 	width: 16% !important;
+}
+.navbar-nav #proyecto-main {
+	width: 13% !important;
+}
+.navbar-nav #herramientas-main {
+	width: 18% !important;
 }
 .navbar hr{
 	width:95%;
@@ -273,4 +284,17 @@ h1{
 		max-width: 80%;
 		margin-left: 10%;
 	}
+}
+
+/* ACCORDION */
+
+.panel-group .panel-heading {
+	background: #f5f5f5;
+	color: #333333;
+}
+
+.panel-group .panel-heading {
+	background: #f5f5f5;
+	color: #333333;
+	border-bottom: 1px solid #ddddddaliceblue;
 }
