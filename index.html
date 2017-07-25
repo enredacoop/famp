@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./css/custom.css" media="screen">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" media="screen">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.print.css" media="screen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.print.css" media="print">
   <!-- fontawesome -->
   <link rel="stylesheet" href="css/font-awesome.css" />
 
@@ -57,7 +57,7 @@
         <div class="col-md-2 social-icons">
           <a href="https://www.facebook.com/foroandaluzgobiernoslocalesyprocesosparticipativos/" target="_blank"><i class="fa fa-facebook-official"></i></a>
           <a href="https://twitter.com/ForoAndGLyPP" target="_blank"><i class="fa fa-twitter"></i></a>
-          <a href="mailto:foroandaluzparticipacion@gmail.com"><i class="fa fa-envelope"></i></a>
+          <a href="mailto:foroandaluzparticipacionyprocesosparticipativos@famp.es"><i class="fa fa-envelope"></i></a>
           <a href="#"><i class="fa fa-rss"></i></a>
         </div>
       </div>
@@ -106,7 +106,7 @@
                 <a href="#laboratorio">Laboratorio participativo</a>
               </li>
               <li>
-                <a href="#experiencias">Banco de experiencias </a>
+                <a href="#experiencias">Herramientas</a>
               </li>
             </ul>
           </div>
@@ -280,11 +280,18 @@
         <div class="col-md-2 logo">
           <img src="./images/logo.png">
         </div>
-        <div class="col-md-6 social-icons">
+        <div class="col-md-2 social-icons">
           <ul>
-            <li><a href="https://www.facebook.com/foroandaluzgobiernoslocalesyprocesosparticipativos/" target="_blank"><i class="fa fa-facebook-official"></i> Foro Andaluz de Gobiernos Locales y Procesos Participativos</a></li>
-            <li><a href="https://twitter.com/ForoAndGLyPP" target="_blank"><i class="fa fa-twitter"></i> @ForoAndGLyPP </a></li>
-            <li><a href="#"><i class="fa fa-rss"></i> Boletín Electrónico</a></li>
+            <li><a href="https://www.facebook.com/foroandaluzgobiernoslocalesyprocesosparticipativos/" target="_blank"><i class="fa fa-facebook-official"></i> Facebook</a></li>
+            <li><a href="https://twitter.com/ForoAndGLyPP" target="_blank"><i class="fa fa-twitter"></i> Twitter </a></li>
+            <li><a href="mailto:foroandaluzparticipacionyprocesosparticipativos@famp.es"><i class="fa fa-envelope"></i> Correo</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 social-icons">
+          <ul>
+            <li class="footer-title">UNIDAD DE GESTIÓN</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i> 954659262 Ext. 172</a></li>
+            <li><a href="#"><i class="fa fa-map-marker"></i> Federación Andaluza de Municipios y Provincias. Avenida San Francisco Javier, 22. Ed. Hermes. 3ª pl.,  Mod. 14 (41018) Sevilla</a></li>
           </ul>
         </div>
       </div>
@@ -303,254 +310,352 @@
         header: {
           left: 'prev,next',
           center: 'title',
-          right: 'month,basicWeek,basicDay'
+          right: 'month,basicWeek,basicDay,listMonth'
         },
         defaultDate: '2017-09-01',
         locale: 'es',
       navLinks: true, // can click day/week names to navigate views
-      editable: true,
+      editable: false,
       eventLimit: true, // allow "more" link when too many events
       events: [
       {
-        title: 'Jerez',
-        start: '2017-09-13'
+        title: 'S1 Jerez',
+        start: '2017-09-13',
+        color: "#23864d"
       },
       {
-        title: 'Cádiz',
+        title: 'S1 Cádiz',
         start: '2017-09-14',
+        color: "#23864d"
       },
       {
-        title: 'Adra',
-        start: '2017-09-19'
+        title: 'S1 Adra',
+        start: '2017-09-19',
+        color: "#23864d"
       },
       {
-        title: 'Almeria',
-        start: '2017-09-20'
+        title: 'S1 Almeria',
+        start: '2017-09-20',
+        color: "#23864d"
       },
       {
-        title: 'Roquetas de Mar',
+        title: 'S1 Roquetas de Mar',
         start: '2016-09-21',
+        color: "#23864d"
       },
       {
-        title: 'Nerja',
+        title: 'S1 Nerja',
         start: '2017-09-26',
+        color: "#23864d"
       },
       {
-        title: 'Málaga',
-        start: '2017-09-27'
+        title: 'S1 Málaga',
+        start: '2017-09-27',
+        color: "#23864d"
       },
       {
-        title: 'Córdoba',
-        start: '2017-09-12'
+        title: 'S1 Córdoba',
+        start: '2017-09-12',
+        color: "#23864d"
       },
       {
-        title: 'Palma del Río',
-        start: '2017-09-14'
+        title: 'S1 Palma del Río',
+        start: '2017-09-14',
+        color: "#23864d"
       },
       {
-        title: 'Martos',
-        start: '2017-09-13'
+        title: 'S1 Martos',
+        start: '2017-09-13',
+        color: "#23864d"
       },
       {
-        title: 'Linares',
-        start: '2017-09-18'
+        title: 'S1 Linares',
+        start: '2017-09-18',
+        color: "#23864d"
       },
       {
-        title: 'Granada',
-        start: '2017-09-19'
+        title: 'S1 Granada',
+        start: '2017-09-19',
+        color: "#23864d"
       },
       {       
-        title: 'Maracena',
-        start: '2017-09-18'
+        title: 'S1 Maracena',
+        start: '2017-09-18',
+        color: "#23864d"
       },
       {       
-        title: 'Sevilla',
-        start: '2017-09-20'
+        title: 'S1 Sevilla',
+        start: '2017-09-20',
+        color: "#23864d"
       },
       {       
-        title: 'Huelva',
-        start: '2017-09-19'
+        title: 'S1 Huelva',
+        start: '2017-09-19',
+        color: "#23864d"
       },
       {       
-        title: 'Ayamonte',
-        start: '2017-09-18'
+        title: 'S1 Ayamonte',
+        start: '2017-09-19',
+        color: "#23864d"
       },
       {       
-        title: 'Nerja',
-        start: '2017-10-10'
+        title: 'S2 Jerez',
+        start: '2017-10-04',
+        color: "#de3527"
       },
       {       
-        title: 'Málaga',
-        start: '2017-10-11'
+        title: 'S2 Cádiz',
+        start: '2017-10-05',
+        color: "#de3527"
       },
       {       
-        title: 'Córdoba',
-        start: '2017-10-03'
+        title: 'S2 Adra',
+        start: '2017-10-03',
+        color: "#de3527"
       },
       {       
-        title: 'Palma del Río',
-        start: '2017-10-05'
+        title: 'S2 Almería',
+        start: '2017-10-04',
+        color: "#de3527"
+      },
+      {       
+        title: 'S2 Roquetas de Mar',
+        start: '2017-10-05',
+        color: "#de3527"
+      },
+
+      {       
+        title: 'S2 Nerja',
+        start: '2017-10-10',
+        color: "#de3527"
+      },
+      {       
+        title: 'S2 Málaga',
+        start: '2017-10-11',
+        color: "#de3527"
+      },
+      {       
+        title: 'S2 Córdoba',
+        start: '2017-10-03',
+        color: "#de3527"
+      },
+      {       
+        title: 'S2 Palma del Río',
+        start: '2017-10-05',
+        color: "#de3527"
       },      
       {       
-        title: 'Martos',
-        start: '2017-10-04'
+        title: 'S2 Martos',
+        start: '2017-10-04',
+        color: "#de3527"
       },
       {       
-        title: 'Linares',
-        start: '2017-10-09'
+        title: 'S2 Linares',
+        start: '2017-10-09',
+        color: "#de3527"
       },
       {       
-        title: 'Granada',
-        start: '2017-10-05'
+        title: 'S2 Granada',
+        start: '2017-10-05',
+        color: "#de3527"
       },
       {       
-        title: 'Maracena',
-        start: '2017-10-06'
+        title: 'S2 Maracena',
+        start: '2017-10-06',
+        color: "#de3527"
       },
       {       
-        title: 'Sevilla',
-        start: '2017-10-04'
+        title: 'S2 Sevilla',
+        start: '2017-10-04',
+        color: "#de3527"
       },
       {       
-        title: 'Huelva',
-        start: '2017-10-03'
+        title: 'S2 Huelva',
+        start: '2017-10-03',
+        color: "#de3527"
       },
       {       
-        title: 'Ayamonte',
-        start: '2017-10-03'
+        title: 'S2 Ayamonte',
+        start: '2017-10-03',
+        color: "#de3527"
       },
       {       
-        title: 'Jerez',
-        start: '2017-10-18'
+        title: 'S3 Jerez',
+        start: '2017-10-18',
+        color: '#479fc7'
       },
       {       
-        title: 'Cádiz',
-        start: '2017-10-18'
+        title: 'S3 Cádiz',
+        start: '2017-10-18',
+        color: '#479fc7'
       },
       {       
-        title: 'Adra',
-        start: '2017-10-24'
+        title: 'S3 Adra',
+        start: '2017-10-24',
+        color: '#479fc7'
       },
       {       
-        title: 'Almería',
-        start: '2017-10-25'
+        title: 'S3 Almería',
+        start: '2017-10-25',
+        color: '#479fc7'
       },
       {       
-        title: 'Almería',
-        start: '2017-10-25'
+        title: 'S3 Almería',
+        start: '2017-10-25',
+        color: '#479fc7'
       },
       {       
-        title: 'Roquetas de Mar',
-        start: '2017-10-26'
+        title: 'S3 Roquetas de Mar',
+        start: '2017-10-26',
+        color: '#479fc7'
       },
       {       
-        title: 'Nerja',
-        start: '2017-10-18'
+        title: 'S3 Nerja',
+        start: '2017-10-18',
+        color: '#479fc7'
       },
       {       
-        title: 'Málaga',
-        start: '2017-10-19'
+        title: 'S3 Málaga',
+        start: '2017-10-19',
+        color: '#479fc7'
       },
       {       
-        title: 'Córdoba',
-        start: '2017-10-16'
+        title: 'S3 Córdoba',
+        start: '2017-10-16',
+        color: '#479fc7'
       },
       {       
-        title: 'Palma del Río',
-        start: '2017-10-18'
+        title: 'S3 Palma del Río',
+        start: '2017-10-18',
+        color: '#479fc7'
       },
       {       
-        title: 'Martos',
-        start: '2017-10-17'
+        title: 'S3 Martos',
+        start: '2017-10-17',
+        color: '#479fc7'
       },
       {       
-        title: 'Linares',
-        start: '2017-10-20'
+        title: 'S3 Linares',
+        start: '2017-10-20',
+        color: '#479fc7'
       },
       {       
-        title: 'Granada',
-        start: '2017-10-19'
+        title: 'S3 Granada',
+        start: '2017-10-19',
+        color: '#479fc7'
       },
       {       
-        title: 'Maracena',
-        start: '2017-10-18'
+        title: 'S3 Maracena',
+        start: '2017-10-18',
+        color: '#479fc7'
       },
       {       
-        title: 'Sevilla',
-        start: '2017-10-25'
+        title: 'S3 Sevilla',
+        start: '2017-10-25',
+        color: '#479fc7'
       },
       {       
-        title: 'Huelva',
-        start: '2017-10-24'
+        title: 'S3 Huelva',
+        start: '2017-10-24',
+        color: '#479fc7'
       },
       {       
-        title: 'Ayamonte',
-        start: '2017-10-24'
+        title: 'S3 Ayamonte',
+        start: '2017-10-24',
+        color: '#479fc7'
       },
       {       
-        title: 'Jerez',
-        start: '2017-11-15'
+        title: 'S4 Jerez',
+        start: '2017-11-15',
+        color: '#af558f'
       },
       {       
-        title: 'Cádiz',
-        start: '2017-11-16'
+        title: 'S4 Cádiz',
+        start: '2017-11-16',
+        color: '#af558f'
       },
       {       
-        title: 'Adra',
-        start: '2017-11-14'
+        title: 'S4 Adra',
+        start: '2017-11-14',
+        color: '#af558f'
       },
       {       
-        title: 'Almería',
-        start: '2017-11-15'
+        title: 'S4 Almería',
+        start: '2017-11-15',
+        color: '#af558f'
       },
       {       
-        title: 'Roquetas de Mar',
-        start: '2017-11-16'
+        title: 'S4 Roquetas de Mar',
+        start: '2017-11-16',
+        color: '#af558f'
       },
       {       
-        title: 'Nerja',
-        start: '2017-11-13'
+        title: 'S4 Nerja',
+        start: '2017-11-13',
+        color: '#af558f'
       },
       {       
-        title: 'Málaga',
-        start: '2017-11-17'
+        title: 'S4 Málaga',
+        start: '2017-11-17',
+        color: '#af558f'
       },
       {       
-        title: 'Córdoba',
-        start: '2017-11-14'
+        title: 'S4 Córdoba',
+        start: '2017-11-14',
+        color: '#af558f'
       },
       {       
-        title: 'Palma del Río',
-        start: '2017-11-13'
+        title: 'S4 Palma del Río',
+        start: '2017-11-13',
+        color: '#af558f'
       },
       {       
-        title: 'Martos',
-        start: '2017-11-17'
+        title: 'S4 Martos',
+        start: '2017-11-17',
+        color: '#af558f'
       },
       {       
-        title: 'Linares',
-        start: '2017-11-16'
+        title: 'S4 Linares',
+        start: '2017-11-16',
+        color: '#af558f'
       },
       {       
-        title: 'Granada',
-        start: '2017-11-14'
+        title: 'S4 Granada',
+        start: '2017-11-14',
+        color: '#af558f'
       },
       {       
-        title: 'Maracena',
-        start: '2017-11-15'
+        title: 'S4 Maracena',
+        start: '2017-11-15',
+        color: '#af558f'
       },
       {       
-        title: 'Sevilla',
-        start: '2017-11-15'
+        title: 'S4 Sevilla',
+        start: '2017-11-15',
+        color: '#af558f'
       },
       {       
-        title: 'Huelva',
-        start: '2017-11-14'
+        title: 'S4 Huelva',
+        start: '2017-11-14',
+        color: '#af558f'
       },
       {       
-        title: 'Ayamonte',
-        start: '2017-11-14'
-      }   
+        title: 'S4 Ayamonte',
+        start: '2017-11-14',
+        color: '#af558f'
+      },
+      {       
+        title: 'I Encuentro Andaluz “Gobierno Abierto, Innovación y Participación Ciudadana: Procesos participativos en la Administración Local de Andalucía',
+        start: '2017-11-28',
+        color: '#af558f'
+      },
+      {       
+        start: '2017-11-28',
+        end: '2017-11-29',
+        overlap: false,
+        rendering: 'background',
+        color: '#e5c8db'
+      }         
       ]
     });
 

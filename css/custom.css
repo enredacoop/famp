@@ -193,6 +193,10 @@ h1{
 .footer #links .social-icons a:hover{
 	color: #000 !important;
 }
+.footer-title {
+	color: #7f7f7f;
+	font-size: 14px;
+}
 /* CALENDAR */
 
 #calendar {
@@ -202,6 +206,15 @@ h1{
 
 .fc-button-group, .fc button {
 	display: block !important;
+}
+
+.fc-toolbar h2 {
+	font-size: 25px;
+	text-transform: capitalize;
+}
+.fc-event {
+	background-color: transparent !important;
+	color: black !important;
 }
 
 /* MOVIL */
