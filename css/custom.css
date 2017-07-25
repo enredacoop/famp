@@ -198,3 +198,52 @@ h1{
 .fc-button-group, .fc button {
 	display: block !important;
 }
+
+/* MOVIL */
+.navbar-toggle {
+	background-color: #000;
+	margin-top: 45px;
+}
+
+
+@media (max-width: 767px) {
+	.navbar-header img {
+		width: 80%;
+		margin-left: -5px;
+	}
+
+	#navbar-main {
+		background: #F6F6F6;
+	}
+
+	#navbar-main {
+		padding-top: 0px;
+		margin-left: 0px;
+	}
+	#secondary-menu {
+		display: none;
+	}
+	.logo img {
+		width: 35%;
+		padding: 10px 0px 10px 0px;
+		margin: 0px 30px;
+	}
+	.navbar-nav > li {
+		width: 100%;
+		text-align: center;
+	}
+	.navbar-nav #anteproyecto-main {
+		width: 100% !important;
+	}
+	#main-menu {
+		z-index: 999;
+		width: 120% !important;
+		margin-left: -5%;
+	}		
+	.navbar-nav .open .dropdown-menu {
+		background-color: #3a9ed0;
+	}
+	.navbar-default .navbar-nav > .open > a {
+	color: #ffffff !important;
+}
+}
