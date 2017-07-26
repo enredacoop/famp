@@ -223,10 +223,6 @@ h1{
 	margin: 0 auto;
 }
 
-#calendar .fc-row {
-	min-height: 10em !important;
-}
-
 #calendar .fc-day-grid-event .fc-content {
 	white-space: normal;
 }
