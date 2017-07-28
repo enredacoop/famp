@@ -8,9 +8,17 @@ h1{
 	padding-bottom:30px;
 }
 
+.row {
+	margin-right: 0px; 
+}
+
 /* SECCIONES */
 .section {
 	padding: 0px 0px 30px 0px;
+}
+
+#slide{
+	margin-top: 60px;
 }
 
 #presentacion hr{
@@ -303,4 +311,83 @@ h1{
 	background: #f5f5f5;
 	color: #333333;
 	border-bottom: 1px solid #ddddddaliceblue;
+}
+
+
+/* SLIDE */
+
+
+
+/* Makes images fully responsive */
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------- Carousel Styling ------------------- */
+
+.carousel-inner {
+  border-radius: 15px;
+}
+
+.carousel-caption {
+  background-color: rgba(0,0,0,.65);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 0 0 10px 25px;
+  color: #fff;
+  text-align: left;
+}
+
+.carousel-caption h3 {
+	font-size: 21px;
+	font-weight: 500;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  margin: 0;
+  padding: 0 25px 25px 0;
+  text-align: right;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+
+/* ------------------- Section Styling - Not needed for carousel styling ------------------- */
+
+.section-white {
+   padding: 10px 0;
+}
+
+.section-white {
+  background-color: #fff;
+  color: #555;
+}
+
+
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+	color: black !important;
+}
+
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+	color: black !important;
 }
