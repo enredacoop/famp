@@ -79,7 +79,7 @@ h1{
 }
 
 #wrapper {
-    padding: 40px 0px;
+    padding: 10px 0px;
 }
 
 /* MAPA */
@@ -382,6 +382,11 @@ h1{
   color: #555;
 }
 
+@media screen and (min-width: 992px) {
+
+  #slide .container {
+    max-width: 930px;
+  }
 
 
 .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
