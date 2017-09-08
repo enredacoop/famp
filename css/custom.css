@@ -139,9 +139,40 @@ h1{
 	margin-bottom: 0px; 
 }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-	color: #fcfbf8 !important;
-	background-color: #090909;
+#proyecto-main > a:hover, #proyecto-main > a:focus {
+	color: #000 !important;
+	background-color: #fff !important;
+	border-bottom: 2px solid #3a9ed0 !important;
+}
+
+#anteproyecto-main > a:hover, #anteproyecto-main > a:focus {
+	color: #000 !important;
+	background-color: #fff !important;
+	border-bottom: 2px solid #de3527 !important;
+}
+
+#gruposmotores-main > a:hover, #gruposmotores-main > a:focus {
+	color: #000 !important;
+	background-color: #fff !important;
+	border-bottom: 2px solid #ac5291 !important;
+}
+
+#laboratorio-main > a:hover, #laboratorio-main > a:focus {
+	color: #000 !important;
+	background-color: #fff !important;
+	border-bottom: 2px solid #0c8245 !important;
+}
+
+#herramientas-main > a:hover, #herramientas-main > a:focus {
+	color: #000 !important;
+	background-color: #fff !important;
+	border-bottom: 2px solid #3a9ed0 !important;
+}
+
+#sesiones-main > a:hover, #sesiones-main > a:focus {
+	color: #000 !important;
+	background-color: #fff !important;
+	border-bottom: 2px solid #de3527 !important;
 }
 
 .navbar-fixed-top {
@@ -149,7 +180,7 @@ h1{
 }
 
 #navbar-main{
-	padding-top: 94px;
+	padding-top: 15px;
 	margin-left: 10px;
 }
 .navbar{
