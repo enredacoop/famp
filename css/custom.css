@@ -138,7 +138,10 @@ h1{
 	margin-top: 0px;
 	margin-bottom: 0px; 
 }
-
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+	color: #000 !important;
+	background-color: #fff !important;	
+}
 #proyecto-main > a:hover, #proyecto-main > a:focus {
 	color: #000 !important;
 	background-color: #fff !important;
