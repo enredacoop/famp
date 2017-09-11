@@ -142,36 +142,42 @@ h1{
 #proyecto-main > a:hover, #proyecto-main > a:focus {
 	color: #000 !important;
 	background-color: #fff !important;
+	padding-bottom: 68% !important;
 	border-bottom: 2px solid #3a9ed0 !important;
 }
 
 #anteproyecto-main > a:hover, #anteproyecto-main > a:focus {
 	color: #000 !important;
 	background-color: #fff !important;
+	padding-bottom: 55% !important;
 	border-bottom: 2px solid #de3527 !important;
 }
 
 #gruposmotores-main > a:hover, #gruposmotores-main > a:focus {
 	color: #000 !important;
 	background-color: #fff !important;
+	padding-bottom: 55% !important;
 	border-bottom: 2px solid #ac5291 !important;
 }
 
 #laboratorio-main > a:hover, #laboratorio-main > a:focus {
 	color: #000 !important;
 	background-color: #fff !important;
+	padding-bottom: 55% !important;
 	border-bottom: 2px solid #0c8245 !important;
 }
 
 #herramientas-main > a:hover, #herramientas-main > a:focus {
 	color: #000 !important;
 	background-color: #fff !important;
+	padding-bottom: 64% !important;
 	border-bottom: 2px solid #3a9ed0 !important;
 }
 
 #sesiones-main > a:hover, #sesiones-main > a:focus {
 	color: #000 !important;
 	background-color: #fff !important;
+	padding-bottom: 55% !important;
 	border-bottom: 2px solid #de3527 !important;
 }
 
