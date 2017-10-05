@@ -66,6 +66,11 @@ h1{
 	border-top: 2px solid #ac5291;
 }
 
+#sesiones hr{
+	margin-top: -3px;
+	border-top: 2px solid #ac5291;
+}
+
 #programa hr{
 	margin-top: -3px;
 	border-top: 2px solid #ac5291;
@@ -76,6 +81,13 @@ h1{
 #metodologia hr{
 	margin-top: -3px;
 	border-top: 2px solid #3a9ed0;
+}
+
+#sesiones .nav a{
+	font-family: "Segoe UI","Source Sans Pro",Calibri,Candara,Arial,sans-serif;
+	font-size: 15px;
+	line-height: 1.42857143;
+	color: #333333;
 }
 
 #wrapper {
@@ -372,10 +384,6 @@ h1{
 
 /* ------------------- Carousel Styling ------------------- */
 
-.carousel-inner {
-  border-radius: 15px;
-}
-
 .carousel-caption {
   background-color: rgba(0,0,0,.65);
   position: absolute;
@@ -435,4 +443,49 @@ h1{
 
 .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
 	color: black !important;
+}
+
+a.disabled {
+	cursor: not-allowed;
+}
+
+.modal.in .modal-dialog {
+	width:80%;
+}
+
+.modal-video{
+	margin: 5% 0 0 8%;
+}
+
+.modal-resumen{
+	margin-top: 30px;
+}
+
+#modal-acta-button{
+	width:60%;
+	margin: 20px 0px 20px 0px;
+}
+
+#logo-seccion img {
+	width: 300px;
+	height: 250px;
+	padding: 15px 15px 0px 15px;
+}
+
+#sesion1 li {
+	list-style: none;
+}
+
+#image-logo {
+	max-width: 120px;
+	max-height: 120px;
+	margin-bottom:20px;
+}
+
+#modal-logo-info {
+	margin: 30px 0px 0px 10px;
+}
+
+.modal-lugar {
+	margin: 0px 0px 10px 0px;
 }
