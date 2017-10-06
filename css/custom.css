@@ -446,7 +446,7 @@ h1{
 }
 
 a.disabled {
-	cursor: not-allowed;
+	cursor: not-allowed !important;
 }
 
 .modal.in .modal-dialog {
@@ -492,6 +492,10 @@ a.disabled {
 	width: 100px;
 }
 
+#logo-seccion a {
+	cursor: pointer;
+}
+
 #modal-logo-info {
 	margin: 30px 0px 0px 30px;
 }
@@ -503,3 +507,4 @@ a.disabled {
 #carousel-modal img {
 	max-height: 300px;
 }
+
