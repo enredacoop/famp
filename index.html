@@ -89,12 +89,12 @@
                 <li class="dropdown" id="sesiones-main">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Sesiones de trabajo <span class="caret"></span></a>
                   <ul class="dropdown-menu" aria-labelledby="themes">
-                    <li><a href="#calendario">Sesión 1</a></li>
-                    <li><a href="#calendario">Sesión 2</a></li>
-                    <li><a href="#calendario">Sesión 3</a></li>
-                    <li><a href="#calendario">Sesión 4</a></li>
-                    <li><a href="#calendario">Sesión Virtual</a></li>
-                    <li><a href="#calendario">Evento autonómico de cierre</a></li>
+                    <li><a href="#sesiones">Sesión 1</a></li>
+                    <li><a href="#sesiones">Sesión 2</a></li>
+                    <li><a href="#sesiones">Sesión 3</a></li>
+                    <li><a href="#sesiones">Sesión 4</a></li>
+                    <li><a href="#sesiones">Sesión Virtual</a></li>
+                    <li><a href="#sesiones">Evento autonómico de cierre</a></li>
                     <li class="divider"></li>
                     <li><a href="#calendario">Calendario</a></li>
                   </ul>
@@ -394,7 +394,7 @@
   <div class="row">
     <div class="container">
       <div class="row">
-        <h2>Sesiones</h2>
+        <h2>Sesiones de trabajo de los Grupos Motores Locales</h2>
         <hr/>
       </div>      
       <div id='sesions'>
@@ -522,16 +522,9 @@
               <div class="col-md-7 modal-fecha text-justify"></div>
             </div>
           </div>
-          <div class="col-md-5">
-            <div class="col-md-12 col-md-offset-1 modal-fotografias">
+          <div class="col-md-5" id="info-modal">
+            <div class="col-md-12 col-md-offset-1" id="modal-fotografias">
               <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                  <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" id="carousel-modal">
                   <div class="item active">
@@ -548,12 +541,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-12 modal-video"> 
+            <div class="col-md-12 modal-video" id="video-modal-ins"> 
                <div class="embed-responsive embed-responsive-4by3">
                 <iframe class="embed-responsive-item" id="video-modal" src=""></iframe>
               </div>        
             </div>
-            <div class="col-md-9 col-md-offset-3"><a href="#" type="button" class="btn btn-default" id="modal-acta-button">Descargar el acta completa</a></div>
+            <div class="col-md-10 col-md-offset-3"><a href="#" type="button" class="btn btn-default" id="modal-acta-button">Descargar el acta completa</a></div>
           </div>
           <div class="col-md-5 col-md-offset-1">
             <div class="col-md-12 modal-asistentes text-justify"></div>
@@ -685,6 +678,7 @@
           console.log(fotografias.length);
           if(fotografias.length == 1){
             $('#carousel-modal #image1-modal').attr("src", 'images/fichas/sesion1/' + fotografias);
+            $('#carousel-modal #image1-modal').parent().attr('class','item active');
             $('#image2-modal').parent().remove();
             $('#image3-modal').parent().remove();
           } else if(fotografias.length == 2){
@@ -697,7 +691,16 @@
               $('#carousel-modal #image3-modal').attr("src", 'images/fichas/sesion1/' + fotografias[2]);
           }
           if(sessions.responseJSON[$(this).attr('id').split('-')[0]][1][1].video){
-            $('.modal-video #video-modal').attr("src", sessions.responseJSON[$(this).attr('id').split('-')[0]][1][1].video);
+            if(document.getElementById('video-modal-ins')){
+              $('.modal-video #video-modal').attr("src", sessions.responseJSON[$(this).attr('id').split('-')[0]][1][1].video);
+            } else { 
+              video = '<div class="embed-responsive embed-responsive-4by3"><iframe src="' + sessions.responseJSON[$(this).attr('id').split('-')[0]][1][1].video + '"></iframe></div>';
+              div = document.createElement('div');
+              div.className = "col-md-12 modal-video-ins";
+              div.innerHTML = video;
+              div.id = 'video-modal-ins'
+              document.getElementById('modal-fotografias').appendChild(div);
+            };
           } else {
             $('.modal-video #video-modal').parent().parent().remove();
           }
@@ -881,7 +884,7 @@
       },
       {       
         title: 'S2 Ayamonte',
-        start: '2017-10-18',
+        start: '2017-10-17',
         color: "#de3527"
       },
       {       

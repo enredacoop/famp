@@ -467,10 +467,18 @@ a.disabled {
 }
 
 #logo-seccion img {
-	width: 300px;
-	height: 250px;
+	width: 230px;
+	height: 230px;
 	padding: 15px 15px 0px 15px;
 	border-radius: 50%;
+}
+
+#logo-seccion h4 {
+	margin-left:-30px;
+}
+
+.modal-video-ins{
+	padding: 5% 0 0 0px;
 }
 
 #sesion1 li {
