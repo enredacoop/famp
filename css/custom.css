@@ -471,6 +471,20 @@ a.disabled {
 	height: 210px;
 	padding: 15px 15px 0px 15px;
 	border-radius: 50%;
+	-ms-background-position-x: center;
+    -ms-background-position-y: bottom;
+    background-position: center bottom;
+
+    /* scale bg image proportionately */
+    background-size: cover;
+    
+    /* ie8 workaround - http://louisremi.github.io/background-size-polyfill/ */
+    -ms-behavior: url(https://cdn.css-tricks.com/backgroundsize.min.htc);
+  
+}
+
+#logo-seccion {
+	padding-top: 20px;
 }
 
 #logo-seccion h4 {
