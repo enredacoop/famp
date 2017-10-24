@@ -498,6 +498,10 @@ a.disabled {
 	list-style: none;
 }
 
+#sesion2 li {
+	list-style: none;
+}
+
 #image-logo {
 	max-width: 120px;
 	max-height: 120px;
