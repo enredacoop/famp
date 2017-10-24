@@ -726,7 +726,6 @@
       $(".modal .modal-body .modal-lugar").html("<strong>Lugar del encuentro:</strong> " + sessions.responseJSON[$(this).attr('id').split('-')[0]][0].municipio);
       $(".modal .modal-body .modal-logo img").attr("src", "images/logos/" + sessions.responseJSON[$(this).attr('id').split('-')[0]][0].logo);
       $(".modal .modal-body .modal-fecha").html("<strong>Fecha del encuentro:</strong> " + sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].fecha);
-      console.log(sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1]);
       $(".modal .modal-body .modal-asistentes").html("<strong>Asistentes:</strong> " + sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].asistentes);
       $(".modal .modal-body .modal-resumen").html("<strong>Resumen:</strong> " + sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].resumen);
           //$(".modal .modal-body .modal-fotografias").html("Fotografias: " + sessions.responseJSON[$(this).attr('id').split('-')[0]][1][1].fotografias);
