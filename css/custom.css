@@ -33,8 +33,11 @@ h1{
 	margin-top: -3px;
 	border-top: 2px solid #de3527;
 }
-
 #banco hr{
+	margin-top: -3px;
+	border-top: 2px solid #de3527;
+}
+#mercado hr{
 	margin-top: -3px;
 	border-top: 2px solid #3a9ed0;
 }
