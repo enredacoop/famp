@@ -468,6 +468,10 @@ a.disabled {
 	margin: 20px 0px 20px 0px;
 }
 
+#modal-proyecto-button{
+	margin: 20px 0px 20px 0px;
+}
+
 #logo-seccion img {
 	width: 210px;
 	height: 210px;
@@ -497,11 +501,11 @@ a.disabled {
 	padding: 5% 0 0 0px;
 }
 
-#sesion1 li {
+#sesion1, #sesion2, #sesion3 li {
 	list-style: none;
 }
 
-#sesion2 li {
+#banco li {
 	list-style: none;
 }
 
