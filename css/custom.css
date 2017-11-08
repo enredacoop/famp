@@ -433,10 +433,20 @@ h1{
   color: #555;
 }
 
+#myCarousel .carousel-inner  {
+    
+    max-height: 500px !important; 
+}
+
+.carousel-inner .item img {
+	max-height: 500px;
+}
+
 @media screen and (min-width: 992px) {
 
   #slide .container {
-    max-width: 930px;
+ /*   max-width: 930px; */
+ padding: 0px; 
   }
 
 
