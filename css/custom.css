@@ -18,7 +18,7 @@ h1{
 }
 
 #slide{
-	margin-top: 60px;
+	margin-top: 20px;
 }
 
 #presentacion hr{
@@ -542,3 +542,27 @@ a.disabled {
 	max-height: 300px;
 }
 
+.destacada {
+	margin-bottom: 20px;
+}
+
+.destacada h2 {
+	margin-left:10px;
+	padding: 10px;
+	border: 2px solid #ddd;
+}
+
+.destacada i {
+	padding-right: 20px;
+}
+
+.destacada h2:hover{
+
+	border: 2px solid #ac5291;
+
+}
+
+.destacada a {
+	color: #333;
+	text-decoration: none;
+}

@@ -168,6 +168,12 @@
 
       <div class="section" id="slide">
         <div class="container">
+
+	  <div class="row destacada">
+        <h2><a href="#sesiones"><i class="fa fa-info-circle" aria-hidden="true"></i> Resultados de las sesiones de trabajo de los Grupos Motores Locales</a></h2>
+        
+      </div>
+
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Wrapper for slides -->
             <div class="carousel-inner">          
@@ -708,9 +714,14 @@
             <div class="col-md-1 col-md-offset-1 modal-logo text-justify">
               <img src="" id="image-logo">
             </div>
-            <div class="col-md-7" id="modal-logo-info">
-              <div class="col-md-7 modal-organizacion text-justify"></div>
-              <div class="col-md-7 modal-empleo text-justify"></div>
+            <div class="col-md-4" id="modal-logo-info">
+              <div class="col-md-12 modal-nombre text-justify"></div>
+              <div class="col-md-12 modal-organizacion text-justify"></div>
+              <div class="col-md-12 modal-empleo text-justify"></div>
+            </div>
+             <div class="col-md-5" id="modal-logo-info">
+              <div class="col-md-12 modal-titulo text-justify"></div>
+              <div class="col-md-12 modal-web text-justify"></div>
             </div>
           </div>
           <div class="col-md-5" id="info-modal">
@@ -722,7 +733,6 @@
           <div class="col-md-10 col-md-offset-3"><a href="#" type="button" class="btn btn-default" id="modal-proyecto-button">Ir a la web del proyecto</a></div>
         </div>
         <div class="col-md-5 col-md-offset-1">
-          <div class="col-md-12 modal-titulo text-justify"></div>
           <div class="col-md-12 modal-descripcion text-justify"></div>
           <div class="col-md-10 col-md-offset-2 text-justify">
           </div>
@@ -760,7 +770,7 @@
   </div>
 </div>
 
-<!-- <div class="section" id="banco">
+ <div class="section" id="banco">
   <div class="container">
     <div class="row">
       <h2>Banco de talentos</h2>
@@ -769,20 +779,20 @@
         <div id="bancofichas" class="tab-pane fade in active">
           <div class="row">
             <div class="col-md-3" id="logo-seccion">
-              <li id="1" class="pop2"><a data-toggle="modal" data-target="#modalBanco"><img src="images/image9.png" style="background-image: url('images/logo.png')"></a></li>
-              <h4 class="text-center">Banco 1</h4>
+              <li id="0" class="pop2"><a data-toggle="modal" data-target="#modalBanco"><img src="" style="background-image: url('images/logo2.png')"></a></li>
+              <h4 class="text-center">Francisco Toledano Barrera</h4>
             </div>
             <div class="col-md-3" id="logo-seccion">
-              <li id="2" class="pop2"><a data-toggle="modal" data-target="#modalBanco"><img src="images/image9.png" style="background-image: url('images/logo.png')"></a></li>
-              <h4 class="text-center">Banco 2</h4>
+              <li id="1" class="pop2"><a data-toggle="modal" data-target="#modalBanco"><img src="" style="background-image: url('images/logo2.png')"></a></li>
+              <h4 class="text-center">Judiht Cusio Rodriguez</h4>
             </div>
             <div class="col-md-3" id="logo-seccion">
-              <li id="3" class="pop2"><a data-toggle="modal" data-target="#modalBanco"><img src="images/image9.png" style="background-image: url('images/logo.png')"></a></li>
-              <h4 class="text-center">Banco 3</h4>
+              <li id="2" class="pop2"><a data-toggle="modal" data-target="#modalBanco"><img src="" style="background-image: url('images/logo2.png')"></a></li>
+              <h4 class="text-center">Mº del Rosario Alarcón López</h4>
             </div>
             <div class="col-md-3" id="logo-seccion">
-              <li id="4" class="pop2"><a data-toggle="modal" data-target="#modalBanco"><img src="images/image9.png" style="background-image: url('images/logo.png')"></a></li>
-              <h4 class="text-center">Banco 4</h4>
+              <li id="3" class="pop2"><a data-toggle="modal" data-target="#modalBanco"><img src="" style="background-image: url('images/logo2.png')"></a></li>
+              <h4 class="text-center">Jorgue García Luján</h4>
             </div>
           </div>
         </div>
@@ -791,7 +801,7 @@
     </div>
   </div>
 </div>
- -->
+ 
 <div class="section" id="mercado">
  <div class="container">
   <div class="row">
@@ -869,13 +879,16 @@
     $(".pop2").click(function(){
       var pageTitle = $(this).attr('pageTitle');
       var pageName = $(this).attr('pageName');
+      $("#modalBanco .modal-body .modal-nombre").html("<strong>Nombre:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].nombre);
+
+      $("#modalBanco .modal-body .modal-web").html("<strong>Página web:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].web);
       $("#modalBanco .modal-title").html("BANCO DE TALENTOS - " + sessions2.responseJSON[$(this).attr('id')][0].nombre.toUpperCase() + ' - ' + sessions2.responseJSON[$(this).attr('id')][0].municipio.toUpperCase() + ' (' + sessions2.responseJSON[$(this).attr('id')][0].sesion.toUpperCase() + ')');
       $("#modalBanco .modal-body .modal-organizacion").html("<strong>Organización:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].organizacion);
-      $("#modalBanco .modal-body .modal-empleo").html("<strong>Empleo:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].empleo);
+      $("#modalBanco .modal-body .modal-empleo").html("<strong>Ocupación:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].empleo);
       $("#modalBanco .modal-body .modal-logo img").attr("src", "images/logos/" + sessions2.responseJSON[$(this).attr('id')][0].municipio_logo);
       $('#modalBanco .modal-video #video-modal').attr("src", sessions2.responseJSON[$(this).attr('id')][0].video);
       $("#modalBanco .modal-body #modal-proyecto-button").attr('href',sessions2.responseJSON[$(this).attr('id')][0].link);
-      $("#modalBanco .modal-body .modal-titulo").html("<strong>" + sessions2.responseJSON[$(this).attr('id')][0].titulo + "</strong>");
+      $("#modalBanco .modal-body .modal-titulo").html("<strong>Título del proyecto:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].titulo );
       $("#modalBanco .modal-body .modal-descripcion").html("<strong>Descripción:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].descripcion);
 
       $("#modalBanco .modal-body").load(pageName);
