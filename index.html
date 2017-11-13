@@ -842,6 +842,82 @@
     <img src="./images/banco.jpg" />
   </div>   
 </div>
+
+
+<div class="modal fade" id="modalMercado" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="row">
+            <div class="col-md-1 col-md-offset-1 modal-logo text-justify">
+              <img src="" id="image-logo">
+            </div>
+            <div class="col-md-4" id="modal-logo-info">
+              <div class="col-md-12 modal-nombre text-justify"></div>
+              <div class="col-md-12 modal-ambito text-justify"></div>
+              <div class="col-md-12 modal-fecha text-justify"></div>
+            </div>
+             <div class="col-md-5" id="modal-logo-info">
+              <div class="col-md-12 modal-titulo text-justify"></div>
+              <div class="col-md-12 modal-web text-justify"></div>
+            </div>
+          </div>
+          <div class="col-md-5" id="info-modal">
+            <div class="col-md-12 modal-video" id="video-modal-ins"> 
+             <div class="embed-responsive embed-responsive-4by3">
+              <iframe class="embed-responsive-item" id="video-modal" src=""></iframe>
+            </div>        
+          </div>
+          <div class="col-md-10 col-md-offset-3"><a href="#" type="button" class="btn btn-default" id="modal-proyecto-button">Ir a la web del proyecto</a></div>
+        </div>
+        <div class="col-md-5 col-md-offset-1">
+          <div class="col-md-12 modal-descripcion text-justify"></div>
+          <div class="col-md-10 col-md-offset-2 text-justify">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Fichas mercado de ideas -->
+
+<div class="container">
+    <div class="row">
+      <h2>Proyectos</h2>
+      <hr/>
+      <div class="tab-content">
+        <div id="bancofichas" class="tab-pane fade in active">
+          <div class="row">
+            <div class="col-md-3" id="logo-seccion">
+              <li id="0" class="pop3"><a data-toggle="modal" data-target="#modalMercado"><img src="images/mercado/martos2.jpg" style="background-image: url('images/logo2.png')"></a></li>
+              <h4 class="text-center">FOROS DE PARTICIPACIÓN Y RECOGIDA DE PROPUESTAS</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="1" class="pop3"><a data-toggle="modal" data-target="#modalMercado"><img src="images/mercado/palma2.jpg" style="background-image: url('images/logo2.png')"></a></li>
+              <h4 class="text-center">Propuestas Ciudadanas para los Presupuestos Municipales y Ordenanzas Fiscales del 2018</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="2" class="pop3"><a data-toggle="modal" data-target="#modalMercado"><img src="" style="background-image: url('images/logo2.png')"></a></li>
+              <h4 class="text-center">Propuestas Ciudadanas para los Presupuestos Municipales y Ordenanzas Fiscales del 2018</h4>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>
 
 
@@ -906,7 +982,7 @@
       var pageName = $(this).attr('pageName');
       $("#modalBanco .modal-body .modal-nombre").html("<strong>Nombre:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].nombre);
 
-      $("#modalBanco .modal-body .modal-web").html("<strong>Página web:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].web);
+      $("#modalBanco .modal-body .modal-web").html("<strong>Página web:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].link);
       $("#modalBanco .modal-title").html("BANCO DE TALENTOS - " + sessions2.responseJSON[$(this).attr('id')][0].nombre.toUpperCase() + ' - ' + sessions2.responseJSON[$(this).attr('id')][0].municipio.toUpperCase() + ' (' + sessions2.responseJSON[$(this).attr('id')][0].sesion.toUpperCase() + ')');
       $("#modalBanco .modal-body .modal-organizacion").html("<strong>Organización:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].organizacion);
       $("#modalBanco .modal-body .modal-empleo").html("<strong>Ocupación:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].empleo);
@@ -917,6 +993,28 @@
       $("#modalBanco .modal-body .modal-descripcion").html("<strong>Descripción:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].descripcion);
 
       $("#modalBanco .modal-body").load(pageName);
+    });
+  });  
+</script>
+<script>
+  $(function() {
+    sessions2 = $.getJSON('data/mercado.json');
+    $(".pop3").click(function(){
+      var pageTitle = $(this).attr('pageTitle');
+      var pageName = $(this).attr('pageName');
+      $("#modalMercado .modal-body .modal-nombre").html("<strong>Nombre:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].nombre);
+
+      $("#modalMercado .modal-title").html("MERCADO DE IDEAS - " + sessions2.responseJSON[$(this).attr('id')][0].nombre.toUpperCase() + ' - ' + sessions2.responseJSON[$(this).attr('id')][0].municipio.toUpperCase() );
+      $("#modalMercado .modal-body .modal-organizacion").html("<strong>Organización:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].nombre);
+      $("#modalMercado .modal-body .modal-ambito").html("<strong>Ámbito:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].ambito);
+       $("#modalMercado .modal-body .modal-fecha").html("<strong>Fecha:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].fecha);
+      $("#modalMercado .modal-body .modal-logo img").attr("src", "images/logos/" + sessions2.responseJSON[$(this).attr('id')][0].municipio_logo);
+      $('#modalMercado .modal-video #video-modal').attr("src", sessions2.responseJSON[$(this).attr('id')][0].video);
+      $("#modalMercado .modal-body #modal-proyecto-button").attr('href',sessions2.responseJSON[$(this).attr('id')][0].link);
+      $("#modalMercado .modal-body .modal-titulo").html("<strong>Etiquetas:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].tags );
+      $("#modalMercado .modal-body .modal-descripcion").html("<strong>Descripción:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].descripcion);
+
+      $("#modalMercado .modal-body").load(pageName);
     });
   });  
 </script>

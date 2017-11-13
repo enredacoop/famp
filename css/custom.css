@@ -566,3 +566,12 @@ a.disabled {
 	color: #333;
 	text-decoration: none;
 }
+
+#mercado li {
+	    list-style-type: none;
+}
+
+
+#mercado #logo-seccion img { 
+padding: 0px;
+}
