@@ -893,7 +893,7 @@
 
 <div class="container">
     <div class="row">
-      <h2>Proyectos</h2>
+      <h2>Mercado de ideas</h2>
       <hr/>
       <div class="tab-content">
         <div id="bancofichas" class="tab-pane fade in active">
@@ -1040,21 +1040,21 @@
 </script>
 <script>
   $(function() {
-    sessions2 = $.getJSON('data/mercado.json');
+    sessions3 = $.getJSON('data/mercado.json');
     $(".pop3").click(function(){
       var pageTitle = $(this).attr('pageTitle');
       var pageName = $(this).attr('pageName');
-      $("#modalMercado .modal-body .modal-nombre").html("<strong>Nombre:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].nombre);
+      $("#modalMercado .modal-body .modal-nombre").html("<strong>Nombre:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].nombre);
 
-      $("#modalMercado .modal-title").html("MERCADO DE IDEAS - " + sessions2.responseJSON[$(this).attr('id')][0].nombre.toUpperCase() + ' - ' + sessions2.responseJSON[$(this).attr('id')][0].municipio.toUpperCase() );
-      $("#modalMercado .modal-body .modal-organizacion").html("<strong>Organización:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].nombre);
-      $("#modalMercado .modal-body .modal-ambito").html("<strong>Ámbito:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].ambito);
-       $("#modalMercado .modal-body .modal-fecha").html("<strong>Fecha:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].fecha);
-      $("#modalMercado .modal-body .modal-logo img").attr("src", "images/logos/" + sessions2.responseJSON[$(this).attr('id')][0].municipio_logo);
-      $('#modalMercado .modal-video #video-modal').attr("src", sessions2.responseJSON[$(this).attr('id')][0].video);
-      $("#modalMercado .modal-body #modal-proyecto-button").attr('href',sessions2.responseJSON[$(this).attr('id')][0].link);
-      $("#modalMercado .modal-body .modal-titulo").html("<strong>Etiquetas:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].tags );
-      $("#modalMercado .modal-body .modal-descripcion").html("<strong>Descripción:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].descripcion);
+      $("#modalMercado .modal-title").html("MERCADO DE IDEAS - " + sessions3.responseJSON[$(this).attr('id')][0].nombre.toUpperCase() + ' - ' + sessions3.responseJSON[$(this).attr('id')][0].municipio.toUpperCase() );
+      $("#modalMercado .modal-body .modal-organizacion").html("<strong>Organización:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].nombre);
+      $("#modalMercado .modal-body .modal-ambito").html("<strong>Ámbito:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].ambito);
+       $("#modalMercado .modal-body .modal-fecha").html("<strong>Fecha:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].fecha);
+      $("#modalMercado .modal-body .modal-logo img").attr("src", "images/logos/" + sessions3.responseJSON[$(this).attr('id')][0].municipio_logo);
+      $('#modalMercado .modal-video #video-modal').attr("src", sessions3.responseJSON[$(this).attr('id')][0].video);
+      $("#modalMercado .modal-body #modal-proyecto-button").attr('href',sessions3.responseJSON[$(this).attr('id')][0].link);
+      $("#modalMercado .modal-body .modal-titulo").html("<strong>Etiquetas:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].tags );
+      $("#modalMercado .modal-body .modal-descripcion").html("<strong>Descripción:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].descripcion);
 
       $("#modalMercado .modal-body").load(pageName);
     });
