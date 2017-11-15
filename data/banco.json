@@ -50,7 +50,7 @@
 	[{
 		"sesion": "Sesion 1",
 		"municipio": "Almería",
-		"municipio_logo": "",
+		"municipio_logo": "almeria.png",
 		"nombre": "Mª del Mar Díez Simón",
 		"empleo": "Psicóloga, Secretaria Asociación de vecinos",
 		"organizacion": "FAVA SIGLO XIX ",
@@ -86,7 +86,7 @@
 	[{
 		"sesion": "Sesión 1",
 		"municipio": " Ayamonte",
-		"municipio_logo": " ayamonte.jpg",
+		"municipio_logo": "ayamonte.jpg",
 		"nombre": "Sergio Pino Fernández",
 		"empleo": "Abogado",
 		"organizacion": "Cruz Roja España",
