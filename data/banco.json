@@ -91,12 +91,13 @@
 		"empleo": "Abogado",
 		"organizacion": "Cruz Roja España",
 		"titulo": "",
-		"link": "",
+		"link": "#",
 		"descripcion": " ",
 		"video": ""
 	}],
 	[{
 		"sesion": "Sesión 1 ",
+		"nombre" : "Francisca Aguilera Martín",
 		"municipio": " Ayamonte ",
 		"municipio_logo": "ayamonte.jpg",
 		"empleo": "",
