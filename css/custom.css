@@ -546,6 +546,10 @@ a.disabled {
 	margin-bottom: 20px;
 }
 
+.destacada .btn{
+	color:white;
+}
+
 .destacada h2 {
 	margin-left:10px;
 	padding: 10px;
