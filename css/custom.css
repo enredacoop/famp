@@ -633,6 +633,7 @@ padding: 0px;
 .well-sm {
 	padding: 10px 0px 0px 10px;
 	border-radius: 0;
+	min-height: 7em;
 }
 
 #banco i,#fichas-mercado i {
