@@ -170,10 +170,10 @@ h1{
 	border-bottom: 2px solid #3a9ed0 !important;
 }
 
-#encuentro-main > a:hover, #anteproyecto-main > a:focus {
+#encuentro-main > a:hover, #encuentro-main > a:focus {
 	color: #000 !important;
 	background-color: #fff !important;
-	padding-bottom: 55% !important;
+	padding-bottom: 71.5% !important;
 	border-bottom: 2px solid #de3527 !important;
 }
 
@@ -358,6 +358,19 @@ h1{
 	img {
 		max-width: 80%;
 		margin-left: 10%;
+	}
+	.well-sm .img-rounded.img-responsive {
+		max-width: 90%;
+	}
+	.pop img {
+		width: 100%;
+		background-size: cover;
+	}
+	.section {
+		padding: 0px 0px 30px 20px;
+	}
+	#logo-seccion li {
+		list-style: none;
 	}
 }
 
