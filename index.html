@@ -1,757 +1,757 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Foro Andaluz de Gobiernos Locales y Procesos Participativos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="./css/bootstrap.min.css" media="screen">
-    <link rel="stylesheet" href="./css/custom.css" media="screen">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" media="screen">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.print.css" media="print">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="css/font-awesome.css" />
-    <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Foro Andaluz de Gobiernos Locales y Procesos Participativos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" href="./css/custom.css" media="screen">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" media="screen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.print.css" media="print">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="css/font-awesome.css" />
+  <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
-      <script src="../bower_components/respond/dest/respond.min.js"></script>
-      <![endif]-->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+    <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/locale-all.js'></script>
-      <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/locale-all.js'></script>
+    <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"></script>
 
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-103265792-1', 'auto');
-        ga('send', 'pageview');
+      ga('create', 'UA-103265792-1', 'auto');
+      ga('send', 'pageview');
 
-      </script>
-    </head>
-    <body>
-      <div class="navbar navbar-default navbar-fixed-top">
-        <div class="row" id="secondary-menu">
-          <div class="col-md-2 col-md-offset-3" id="boletin">
-            <a href="#" data-toggle="modal" data-target="#myModal">Boletín Electrónico</a>
-          </div>
-          <div class="col-md-2">
-            <a href="http://www.juntadeandalucia.es/organismos/igualdadypoliticassociales.html" target="_blank">Consejería de Igualdad y Políticas Sociales</a>
-          </div>
-          <div class="col-md-3">
-            <a href="http://www.famp.es/" target="_blank">Federación Andaluza de Municipios y Provincias</a>
-          </div>
-          <div class="col-md-2 social-icons">
-            <a href="https://www.facebook.com/foroandaluzgobiernoslocalesyprocesosparticipativos/" target="_blank"><i class="fa fa-facebook-official"></i></a>
-            <a href="https://twitter.com/ForoAndGLyPP" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="mailto:foroandaluzparticipacionyprocesosparticipativos@famp.es"><i class="fa fa-envelope"></i></a>
-          </div>
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="row" id="secondary-menu">
+        <div class="col-md-2 col-md-offset-3" id="boletin">
+          <a href="#" data-toggle="modal" data-target="#myModal">Boletín Electrónico</a>
         </div>
-        <hr/>
-
-        <div class="container">
-          <div class="col-md-2">
-            <div class="navbar-header">
-              <a href="./index.html"><img src="./images/logo.png"></a>
-              <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>          
-            </div>
-          </div>
-          <div id="main-menu" class="col-md-9 col-md-offset-1">
-            <div class="navbar-collapse collapse" id="navbar-main">
-              <ul class="nav navbar-nav">
-                <li class="dropdown" id="proyecto-main">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Proyecto FORO<span class="caret"></span></a>
-                  <ul class="dropdown-menu" aria-labelledby="themes">
-                    <li><a href="#objetivos">Objetivos del proyecto</a></li>
-                    <li><a href="#metodologia">Metodología</a></li>
-                    <li><a href="#programa">Programa de trabajo</a></li>
-                    <li><a href="#anteproyecto">Anteproyecto de Ley</a></li>
-                  </ul>
-                </li>
-                <li id="encuentro-main">
-                  <a href="encuentro.html">I Encuentro</a>
-                </li>
-                <li id="gruposmotores-main">
-                  <a href="#mapa">Grupos Motores</a>
-                </li>
-                <li class="dropdown" id="sesiones-main">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Sesiones de trabajo <span class="caret"></span></a>
-                  <ul class="dropdown-menu" aria-labelledby="themes">
-                    <li><a href="#sesiones">Sesión 1</a></li>
-                    <li><a href="#sesiones">Sesión 2</a></li>
-                    <li><a href="#sesiones">Sesión 3</a></li>
-                    <li><a href="#sesiones">Sesión 4</a></li>
-                    <li><a href="#sesiones">Sesión Virtual</a></li>
-                    <li><a href="#sesiones">Evento autonómico de cierre</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#calendario">Calendario</a></li>
-                  </ul>
-                </li>
-                <li id="laboratorio-main">
-                  <a href="#laboratorio">Laboratorio participativo</a>
-                </li>
-                <li class="dropdown" id="herramientas-main">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Herramientas<span class="caret"></span></a>
-                  <ul class="dropdown-menu" aria-labelledby="themes">
-                    <li><a href="#banco">Mercado de Ideas</a></li>
-                    <li><a href="http://www.famp.es/menuFC2.php" target="_blank">E-learning Formación continua FAMP</a></li>
-                    <li><a href="#recursos">Recursos para la participación ciudadana</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div class="col-md-2">
+          <a href="http://www.juntadeandalucia.es/organismos/igualdadypoliticassociales.html" target="_blank">Consejería de Igualdad y Políticas Sociales</a>
+        </div>
+        <div class="col-md-3">
+          <a href="http://www.famp.es/" target="_blank">Federación Andaluza de Municipios y Provincias</a>
+        </div>
+        <div class="col-md-2 social-icons">
+          <a href="https://www.facebook.com/foroandaluzgobiernoslocalesyprocesosparticipativos/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+          <a href="https://twitter.com/ForoAndGLyPP" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="mailto:foroandaluzparticipacionyprocesosparticipativos@famp.es"><i class="fa fa-envelope"></i></a>
         </div>
       </div>
+      <hr/>
 
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Suscríbete al Boletín Electrónico</h4>
-            </div>
-            <div class="modal-body">
-              <div id="mc_embed_signup">
-                <form action="//foroandaluzgobiernoslocalesyprocesosparticipativos.us16.list-manage.com/subscribe/post?u=e28c376c0650e07ac18bdcdbe&amp;id=6e377db387" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                  <div id="mc_embed_signup_scroll">
-
-                    <div class="indicates-required"><span class="asterisk">*</span>campo obligatorio</div>
-                    <div class="mc-field-group">
-                      <label for="mce-EMAIL">Correo electrónico  <span class="asterisk">*</span>
-                      </label>
-                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-                    </div>
-                    <div class="mc-field-group">
-                      <label for="mce-FNAME">Nombre  <span class="asterisk">*</span>
-                      </label>
-                      <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
-                    </div>
-                    <div class="mc-field-group">
-                      <label for="mce-LNAME">Apellidos  <span class="asterisk">*</span>
-                      </label>
-                      <input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
-                    </div>
-                    <div class="mc-field-group">
-                      <label for="mce-ONAME">Organización  <span class="asterisk">*</span>
-                      </label>
-                      <input type="text" value="" name="ONAME" class="required" id="mce-ONAME">
-                    </div>
-                    <div id="mce-responses" class="clear">
-                      <div class="response" id="mce-error-response" style="display:none"></div>
-                      <div class="response" id="mce-success-response" style="display:none"></div>
-                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e28c376c0650e07ac18bdcdbe_6e377db387" tabindex="-1" value=""></div>
-                    <div class="clear"><input type="submit" value="Suscríbete" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                  </div>
-                </form>
-              </div>        
-            </div>
+      <div class="container">
+        <div class="col-md-2">
+          <div class="navbar-header">
+            <a href="./index.html"><img src="./images/logo.png"></a>
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>          
           </div>
         </div>
-      </div>
-
-      <div class="section" id="slide">
-        <div class="container">
-
-          <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">          
-
-              <div class="item active">
-                <a href="#" target="_blank">
-                  <img src="./images/slide/slide5.jpg" alt="diariosur" style="width:100%;">
-                  <div class="carousel-caption">
-                    <h3>I Encuentro Andaluz de “Gobiernos Abierto, Innovación y Participación Ciudadana: Procesos participativos en la Administración Local de Andalucía”</h3>
-                  </div>
-                </a>
-              </div>
-
-              <div class="item">
-                <a href="#" target="_blank">
-                  <img src="./images/slide/slide6.jpg" alt="eldigitaladeasturias" style="width:100%;">
-                  <div class="carousel-caption">
-                    <h3>I Encuentro Andaluz de “Gobiernos Abierto, Innovación y Participación Ciudadana: Procesos participativos en la Administración Local de Andalucía”</h3>
-                  </div>
-                </a>
-              </div>
-
-              <div class="item">
-                <a href="#" target="_blank">
-                  <img src="./images/slide/slide7.jpg" alt="eldigitaladeasturias" style="width:100%;">
-                  <div class="carousel-caption">
-                    <h3>I Encuentro Andaluz de “Gobiernos Abierto, Innovación y Participación Ciudadana: Procesos participativos en la Administración Local de Andalucía”</h3>
-                  </div>
-                </a>
-              </div>
-
-              <div class="item">
-                <a href="#" target="_blank">
-                  <img src="./images/slide/slide8.jpg" alt="eldigitaladeasturias" style="width:100%;">
-                  <div class="carousel-caption">
-                    <h3>I Encuentro Andaluz de “Gobiernos Abierto, Innovación y Participación Ciudadana: Procesos participativos en la Administración Local de Andalucía”</h3>
-                  </div>
-                </a>
-              </div>
-
-              <div class="item">
-                <a href="#" target="_blank">
-                  <img src="./images/slide/slide9.jpg" alt="eldigitaladeasturias" style="width:100%;">
-                  <div class="carousel-caption">
-                    <h3>I Encuentro Andaluz de “Gobiernos Abierto, Innovación y Participación Ciudadana: Procesos participativos en la Administración Local de Andalucía”</h3>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-      <div id="presentacion">
-        <div class="container" id="wrapper">
-
-          <div class="row">
-            <div class="col-sm-12">
-              <h2>Foro Andaluz de Gobiernos Locales y Procesos Participativos</h2>
-              <hr/>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4">
-              <img src="./images/team.jpg" />
-            </div>
-            <div class="col-md-5 col-md-offset-3">
-              <p>Hoy por hoy las Administraciones Públicas, y de manera más destacada las Entidades Locales, comienzan a tomar conciencia de que la participación activa de la ciudadanía en los asuntos públicos es una necesidad surgida de la crisis de representatividad política tradicional.</p>
-
-              <p>Esta crisis de legitimidad que padecen nuestros sistemas democráticos, supone para los municipios abordar nuevos retos que favorezcan el tránsito de los modelos tradicionales a modelos de “Gobernanza Democrática” en los que el gobierno y las Administraciones Públicas ocupan un papel de liderazgo y mediación entre los diversos actores sociales; por tanto, estamos asistiendo a la creación de nuevas fórmulas de poder compartido que hace posible afrontar nuevos retos sociales.</p>
-
-              <p>En este contexto, el Foro Andaluz de Gobiernos Locales y Procesos Participativos es un proyecto impulsado por la Federación Andaluza de Municipios y Provincias y la Consejería de Igualdad y Políticas Sociales para acercar la futura Ley de Participación Ciudadana a los Gobiernos Locales de Andalucía, generando procesos participativos y construyendo herramientas útiles para su transferencia.</p>
-
-              <p>Dada la previsiones de aprobación de la Ley de Participación Ciudadana, actualmente en el Parlamento Andaluz, es preciso abrir un proceso de capacitación para el análisis y el buen conocimiento de su articulado por parte de los responsables políticos y el personal técnico de los gobiernos locales de Andalucía.</p>
-            </div>            
-          </div>
-        </div>
-      </div>
-
-      <div class="section" id="objetivos">
-        <div class="container">
-          <div class="row">
-            <h2>Objetivos del proyecto</h2>
-            <hr/>
-          </div>
-          <div class="col-md-5">
-            <p>Objetivos Generales:</p>
-            <ul>
-              <li>Conocer el Proyecto de Ley de Participación Ciudadana de Andalucía, como norma reguladora de esta materia.</li>
-              <li>Facilitar la participación ciudadana en la Administración Local para establecer cauces materiales, proporcionar la información, los conocimientos y la motivación necesaria para hacerla efectiva.</li>
-              <li>Trabajar de forma coordinada y cooperativa entre Administraciones Públicas y Actores Locales a fin de conseguir las condiciones sociales para que toda la ciudadanía tenga las mismas oportunidades para opinar, expresar y participar en condiciones de igualdad en los asuntos públicos.</li>
-            </ul>
-
-            <p>Objetivos específicos:</p>
-            <ul>
-              <li>Procurar la mejora de los servicios públicos locales, cooperando con la Junta de Andalucía, gracias a la puesta en marcha de este proyecto, acercando la Ley de Participación Ciudadana a los Gobiernos Locales de Andalucía.</li>
-              <li>Realizar una revisión conjunta de la situación en torno a los modelos de participación ciudadana en los Ayuntamientos de Andalucía (DAFO).</li>
-              <li>Formar/Capacitar a Responsables Políticos y el persona técnico entorno a herramientas y procesos útiles/testados para la puesta en marcha de Proyectos de Participación Ciudadana en el ámbito local.</li>
-              <li>Asesorar a los Gobiernos Locales de Andalucía para la puesta en marcha de actuaciones vinculadas con los Procesos Participativos (desde la Unidad de Gestión FAMP). Constituir el Foro Andaluz de Gobiernos Locales y Procesos Participativos en Andalucía.</li>
+        <div id="main-menu" class="col-md-9 col-md-offset-1">
+          <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+              <li class="dropdown" id="proyecto-main">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Proyecto FORO<span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="themes">
+                  <li><a href="#objetivos">Objetivos del proyecto</a></li>
+                  <li><a href="#metodologia">Metodología</a></li>
+                  <li><a href="#programa">Programa de trabajo</a></li>
+                  <li><a href="#anteproyecto">Anteproyecto de Ley</a></li>
+                </ul>
+              </li>
+              <li id="encuentro-main">
+                <a href="encuentro.html">I Encuentro</a>
+              </li>
+              <li id="gruposmotores-main">
+                <a href="#mapa">Grupos Motores</a>
+              </li>
+              <li class="dropdown" id="sesiones-main">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Sesiones de trabajo <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="themes">
+                  <li><a href="#sesiones">Sesión 1</a></li>
+                  <li><a href="#sesiones">Sesión 2</a></li>
+                  <li><a href="#sesiones">Sesión 3</a></li>
+                  <li><a href="#sesiones">Sesión 4</a></li>
+                  <li><a href="#sesiones">Sesión Virtual</a></li>
+                  <li><a href="#sesiones">Evento autonómico de cierre</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#calendario">Calendario</a></li>
+                </ul>
+              </li>
+              <li id="laboratorio-main">
+                <a href="#laboratorio">Laboratorio participativo</a>
+              </li>
+              <li class="dropdown" id="herramientas-main">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Herramientas<span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="themes">
+                  <li><a href="#banco">Mercado de Ideas</a></li>
+                  <li><a href="http://www.famp.es/menuFC2.php" target="_blank">E-learning Formación continua FAMP</a></li>
+                  <li><a href="#recursos">Recursos para la participación ciudadana</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
-          <div class="col-md-4 col-md-offset-1">
-            <img src="./images/objetivos.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Suscríbete al Boletín Electrónico</h4>
+          </div>
+          <div class="modal-body">
+            <div id="mc_embed_signup">
+              <form action="//foroandaluzgobiernoslocalesyprocesosparticipativos.us16.list-manage.com/subscribe/post?u=e28c376c0650e07ac18bdcdbe&amp;id=6e377db387" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+
+                  <div class="indicates-required"><span class="asterisk">*</span>campo obligatorio</div>
+                  <div class="mc-field-group">
+                    <label for="mce-EMAIL">Correo electrónico  <span class="asterisk">*</span>
+                    </label>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                  </div>
+                  <div class="mc-field-group">
+                    <label for="mce-FNAME">Nombre  <span class="asterisk">*</span>
+                    </label>
+                    <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+                  </div>
+                  <div class="mc-field-group">
+                    <label for="mce-LNAME">Apellidos  <span class="asterisk">*</span>
+                    </label>
+                    <input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
+                  </div>
+                  <div class="mc-field-group">
+                    <label for="mce-ONAME">Organización  <span class="asterisk">*</span>
+                    </label>
+                    <input type="text" value="" name="ONAME" class="required" id="mce-ONAME">
+                  </div>
+                  <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e28c376c0650e07ac18bdcdbe_6e377db387" tabindex="-1" value=""></div>
+                  <div class="clear"><input type="submit" value="Suscríbete" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+              </form>
+            </div>        
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="section" id="metodologia">
-        <div class="container">
-          <div class="row">
-            <h2>Metodología</h2>
-            <hr/>
+    <div class="section" id="slide">
+      <div class="container">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">          
+
+            <div class="item active">
+              <a href="#" target="_blank">
+                <img src="./images/slide/slide5.jpg" alt="diariosur" style="width:100%;">
+                <div class="carousel-caption">
+                  <h3>I Encuentro Andaluz de “Gobiernos Abierto, Innovación y Participación Ciudadana: Procesos participativos en la Administración Local de Andalucía”</h3>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="#" target="_blank">
+                <img src="./images/slide/slide6.jpg" alt="eldigitaladeasturias" style="width:100%;">
+                <div class="carousel-caption">
+                  <h3>I Encuentro Andaluz de “Gobiernos Abierto, Innovación y Participación Ciudadana: Procesos participativos en la Administración Local de Andalucía”</h3>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="#" target="_blank">
+                <img src="./images/slide/slide7.jpg" alt="eldigitaladeasturias" style="width:100%;">
+                <div class="carousel-caption">
+                  <h3>I Encuentro Andaluz de “Gobiernos Abierto, Innovación y Participación Ciudadana: Procesos participativos en la Administración Local de Andalucía”</h3>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="#" target="_blank">
+                <img src="./images/slide/slide8.jpg" alt="eldigitaladeasturias" style="width:100%;">
+                <div class="carousel-caption">
+                  <h3>I Encuentro Andaluz de “Gobiernos Abierto, Innovación y Participación Ciudadana: Procesos participativos en la Administración Local de Andalucía”</h3>
+                </div>
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="#" target="_blank">
+                <img src="./images/slide/slide9.jpg" alt="eldigitaladeasturias" style="width:100%;">
+                <div class="carousel-caption">
+                  <h3>I Encuentro Andaluz de “Gobiernos Abierto, Innovación y Participación Ciudadana: Procesos participativos en la Administración Local de Andalucía”</h3>
+                </div>
+              </a>
+            </div>
           </div>
-          <div class="col-md-4">
-            <img src="./images/metodologia.png" />
-          </div>
-          <div class="col-md-5 col-md-offset-2">
-            <p>La metodología investigación-acción participativa (IAP) es una metodología que presenta unas características particulares que la distinguen de otras opciones. Entre ellas podemos señalar:</p>
-            <ul>
-              <li>Es investigación: Orienta un proceso de estudio de la realidad o de aspectos determinados de ella, con rigor científico.</li>
-              <li>Es acción: entendida no sólo como el simple actuar, o cualquier tipo de acción, sino como acción que conduce al cambio social estructural; esta acción es llamada por algunos de sus impulsores, praxis (proceso síntesis entre teoría y práctica).</li>
-              <li>Es participativa: Es una investigación - acción realizada participativamente. La investigación no es sólo realizada por los expertos, sino con la participación de la comunidad involucrada en ella</li>
-            </ul>
-            <p>El acercamiento al objeto de estudio partirá de un diagnóstico inicial, de la consulta a diferentes actores implicados en busca de apreciaciones, puntos de vista, opiniones, etc.</p>
-          </div>
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
+    </div>
 
-      <div class="section" id="programa">
-       <div class="container">
+
+    <div id="presentacion">
+      <div class="container" id="wrapper">
+
         <div class="row">
-          <h2>Programa de trabajo</h2>
-          <hr/>
-        </div>    
-        <div class="panel-group" id="accordion">
-          <div class="panel panel-default">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  Fase 1. Investigación / Acción
-                </h4>
-              </div>
-            </a>
-            <div id="collapse1" class="panel-collapse collapse in">
-              <div class="panel-body">
-                <ol>
-                  <li>T1. Realizar una revisión conjunta de la situación en torno a los modelos de procesos participativos los Ayuntamientos de Andalucía</li>
-                  <li>T2. Fortalecer el Observatorio de Participación Ciudadana de la FAMP.</li>
-                  <li>T3. Diseñar la Estrategia Local de Gobierno Abierto y Procesos Participativos; así como su Hoja de Ruta.</li>
-                  <li>T4. Redactar el Documento/Manifiesto de Adhesión al Pacto Andaluz por la participación ciudadana y la calidad democrática en la Administración Local en Andalucía.</li>
-                </ol>
-              </div>
-            </div>
+          <div class="col-sm-12">
+            <h2>Foro Andaluz de Gobiernos Locales y Procesos Participativos</h2>
+            <hr/>
           </div>
-          <div class="panel panel-default">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><div class="panel-heading">
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <img src="./images/team.jpg" />
+          </div>
+          <div class="col-md-5 col-md-offset-3">
+            <p>Hoy por hoy las Administraciones Públicas, y de manera más destacada las Entidades Locales, comienzan a tomar conciencia de que la participación activa de la ciudadanía en los asuntos públicos es una necesidad surgida de la crisis de representatividad política tradicional.</p>
+
+            <p>Esta crisis de legitimidad que padecen nuestros sistemas democráticos, supone para los municipios abordar nuevos retos que favorezcan el tránsito de los modelos tradicionales a modelos de “Gobernanza Democrática” en los que el gobierno y las Administraciones Públicas ocupan un papel de liderazgo y mediación entre los diversos actores sociales; por tanto, estamos asistiendo a la creación de nuevas fórmulas de poder compartido que hace posible afrontar nuevos retos sociales.</p>
+
+            <p>En este contexto, el Foro Andaluz de Gobiernos Locales y Procesos Participativos es un proyecto impulsado por la Federación Andaluza de Municipios y Provincias y la Consejería de Igualdad y Políticas Sociales para acercar la futura Ley de Participación Ciudadana a los Gobiernos Locales de Andalucía, generando procesos participativos y construyendo herramientas útiles para su transferencia.</p>
+
+            <p>Dada la previsiones de aprobación de la Ley de Participación Ciudadana, actualmente en el Parlamento Andaluz, es preciso abrir un proceso de capacitación para el análisis y el buen conocimiento de su articulado por parte de los responsables políticos y el personal técnico de los gobiernos locales de Andalucía.</p>
+          </div>            
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="objetivos">
+      <div class="container">
+        <div class="row">
+          <h2>Objetivos del proyecto</h2>
+          <hr/>
+        </div>
+        <div class="col-md-5">
+          <p>Objetivos Generales:</p>
+          <ul>
+            <li>Conocer el Proyecto de Ley de Participación Ciudadana de Andalucía, como norma reguladora de esta materia.</li>
+            <li>Facilitar la participación ciudadana en la Administración Local para establecer cauces materiales, proporcionar la información, los conocimientos y la motivación necesaria para hacerla efectiva.</li>
+            <li>Trabajar de forma coordinada y cooperativa entre Administraciones Públicas y Actores Locales a fin de conseguir las condiciones sociales para que toda la ciudadanía tenga las mismas oportunidades para opinar, expresar y participar en condiciones de igualdad en los asuntos públicos.</li>
+          </ul>
+
+          <p>Objetivos específicos:</p>
+          <ul>
+            <li>Procurar la mejora de los servicios públicos locales, cooperando con la Junta de Andalucía, gracias a la puesta en marcha de este proyecto, acercando la Ley de Participación Ciudadana a los Gobiernos Locales de Andalucía.</li>
+            <li>Realizar una revisión conjunta de la situación en torno a los modelos de participación ciudadana en los Ayuntamientos de Andalucía (DAFO).</li>
+            <li>Formar/Capacitar a Responsables Políticos y el persona técnico entorno a herramientas y procesos útiles/testados para la puesta en marcha de Proyectos de Participación Ciudadana en el ámbito local.</li>
+            <li>Asesorar a los Gobiernos Locales de Andalucía para la puesta en marcha de actuaciones vinculadas con los Procesos Participativos (desde la Unidad de Gestión FAMP). Constituir el Foro Andaluz de Gobiernos Locales y Procesos Participativos en Andalucía.</li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-md-offset-1">
+          <img src="./images/objetivos.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="metodologia">
+      <div class="container">
+        <div class="row">
+          <h2>Metodología</h2>
+          <hr/>
+        </div>
+        <div class="col-md-4">
+          <img src="./images/metodologia.png" />
+        </div>
+        <div class="col-md-5 col-md-offset-2">
+          <p>La metodología investigación-acción participativa (IAP) es una metodología que presenta unas características particulares que la distinguen de otras opciones. Entre ellas podemos señalar:</p>
+          <ul>
+            <li>Es investigación: Orienta un proceso de estudio de la realidad o de aspectos determinados de ella, con rigor científico.</li>
+            <li>Es acción: entendida no sólo como el simple actuar, o cualquier tipo de acción, sino como acción que conduce al cambio social estructural; esta acción es llamada por algunos de sus impulsores, praxis (proceso síntesis entre teoría y práctica).</li>
+            <li>Es participativa: Es una investigación - acción realizada participativamente. La investigación no es sólo realizada por los expertos, sino con la participación de la comunidad involucrada en ella</li>
+          </ul>
+          <p>El acercamiento al objeto de estudio partirá de un diagnóstico inicial, de la consulta a diferentes actores implicados en busca de apreciaciones, puntos de vista, opiniones, etc.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="programa">
+     <div class="container">
+      <div class="row">
+        <h2>Programa de trabajo</h2>
+        <hr/>
+      </div>    
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+            <div class="panel-heading">
               <h4 class="panel-title">
-                Fase 2. Implementación
+                Fase 1. Investigación / Acción
               </h4>
             </div>
           </a>
-          <div id="collapse2" class="panel-collapse collapse">
+          <div id="collapse1" class="panel-collapse collapse in">
             <div class="panel-body">
               <ol>
-                <li>T1. Asesorar a los Gobiernos Locales de Andalucía para la puesta en marcha de actuaciones vinculadas con Gobiernos Abierto y Procesos Participativos (Unidad de Gestión FAMP).</li>
-                <li>T2. Constituir el Foro Andaluz de Gobiernos Locales y Procesos Participativos en Andalucía.</li>
+                <li>T1. Realizar una revisión conjunta de la situación en torno a los modelos de procesos participativos los Ayuntamientos de Andalucía</li>
+                <li>T2. Fortalecer el Observatorio de Participación Ciudadana de la FAMP.</li>
+                <li>T3. Diseñar la Estrategia Local de Gobierno Abierto y Procesos Participativos; así como su Hoja de Ruta.</li>
+                <li>T4. Redactar el Documento/Manifiesto de Adhesión al Pacto Andaluz por la participación ciudadana y la calidad democrática en la Administración Local en Andalucía.</li>
               </ol>
             </div>
           </div>
         </div>
         <div class="panel panel-default">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                Fase 3. Comunicación
-              </h4>
-            </div>
-          </a>
-          <div id="collapse3" class="panel-collapse collapse">
-            <div class="panel-body">
-              <ol>
-                <li>T1. Plan de Comunicación entorno a “Gobierno Abierto y Procesos Participativos en la Administración Local”.</li>
-                <li>T2. Edición del Boletín Electrónico: “Andalucía: Gobierno Abierto, Innovación y Participación en la Administración Local”.</li>
-                <li>T3. Difusión de la Hoja de Ruta para la implementación de la Estrategia Local de Gobierno Abierto y Procesos Participativos en la Administración Local de Andalucía.</li>
-              </ol>
-            </div>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><div class="panel-heading">
+            <h4 class="panel-title">
+              Fase 2. Implementación
+            </h4>
+          </div>
+        </a>
+        <div id="collapse2" class="panel-collapse collapse">
+          <div class="panel-body">
+            <ol>
+              <li>T1. Asesorar a los Gobiernos Locales de Andalucía para la puesta en marcha de actuaciones vinculadas con Gobiernos Abierto y Procesos Participativos (Unidad de Gestión FAMP).</li>
+              <li>T2. Constituir el Foro Andaluz de Gobiernos Locales y Procesos Participativos en Andalucía.</li>
+            </ol>
           </div>
         </div>
-      </div> 
-    </div>
+      </div>
+      <div class="panel panel-default">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              Fase 3. Comunicación
+            </h4>
+          </div>
+        </a>
+        <div id="collapse3" class="panel-collapse collapse">
+          <div class="panel-body">
+            <ol>
+              <li>T1. Plan de Comunicación entorno a “Gobierno Abierto y Procesos Participativos en la Administración Local”.</li>
+              <li>T2. Edición del Boletín Electrónico: “Andalucía: Gobierno Abierto, Innovación y Participación en la Administración Local”.</li>
+              <li>T3. Difusión de la Hoja de Ruta para la implementación de la Estrategia Local de Gobierno Abierto y Procesos Participativos en la Administración Local de Andalucía.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div> 
   </div>
+</div>
 
-  <div class="section" id="anteproyecto">
-   <div class="container">
-    <div class="row">
-      <h2>Anteproyecto de Ley</h2>
-      <hr/>
-    </div>
-    <p>Tal y como queda de manifiesto en la Exposición de Motivos: “La democracia representativa ha supuesto un avance histórico respecto a otros sistemas políticos;....sin embargo, parece estar asentándose la idea de que la elección de nuestros representantes, a través de la emisión del voto una vez cada cuatro años, es un elemento necesario pero insuficiente. El impulso de formas directas de participación ciudadana que complementen las instituciones representativas se ha convertido en una demanda social de primera magnitud como se viene poniendo de manifiesto en los últimos tiempos.” </p>
-    <p>La participación ciudadana en los asuntos públicos es un derecho constitucional de la ciudadanía y un mandato imperativo que la Constitución dicta a los poderes públicos, así el Art. 9.2 establece que corresponde a los poderes públicos “facilitar la participación de todos los ciudadanos en la vida política, económica, cultural y social”. Como derecho, es necesario regularla generando mecanismos que posibiliten su ejercicio. </p>
-    <p>La futura Ley de Participación Ciudadana en Andalucía buscará acercar “aún más” a la población andaluza a la toma de decisiones con el objetivo de proteger, promover y desarrollar el derecho a intervenir en los asuntos públicos que acaban afectando a la vida cotidiana del conjunto de la sociedad. </p>
-    <p>El concepto Participación Ciudadana tiene un carácter transversal, ello plantea la necesidad de potenciar este concepto desde la cooperación Interadministrativa y el Trabajo en Red . En ese sentido esta ley va a suponer un avance en cuanto a la “construcción de espacios de diálogo, comunicación y codecisión ciudadana”.</p>
-
-    <p><a href="http://www.parlamentodeandalucia.es/webdinamica/portal-web-parlamento/pdf.do?tipodoc=bopa&id=117057"> Enlace proyecto de ley</a></p>
-    <p><a href="http://www.parlamentodeandalucia.es/webdinamica/portal-web-parlamento/actividadparlamentaria/tramitacionencurso/legislativas.do?numexp=10-16/PL-000005">Proceso de tramitación parlamentaria</a></p>
+<div class="section" id="anteproyecto">
+ <div class="container">
+  <div class="row">
+    <h2>Anteproyecto de Ley</h2>
+    <hr/>
   </div>
+  <p>Tal y como queda de manifiesto en la Exposición de Motivos: “La democracia representativa ha supuesto un avance histórico respecto a otros sistemas políticos;....sin embargo, parece estar asentándose la idea de que la elección de nuestros representantes, a través de la emisión del voto una vez cada cuatro años, es un elemento necesario pero insuficiente. El impulso de formas directas de participación ciudadana que complementen las instituciones representativas se ha convertido en una demanda social de primera magnitud como se viene poniendo de manifiesto en los últimos tiempos.” </p>
+  <p>La participación ciudadana en los asuntos públicos es un derecho constitucional de la ciudadanía y un mandato imperativo que la Constitución dicta a los poderes públicos, así el Art. 9.2 establece que corresponde a los poderes públicos “facilitar la participación de todos los ciudadanos en la vida política, económica, cultural y social”. Como derecho, es necesario regularla generando mecanismos que posibiliten su ejercicio. </p>
+  <p>La futura Ley de Participación Ciudadana en Andalucía buscará acercar “aún más” a la población andaluza a la toma de decisiones con el objetivo de proteger, promover y desarrollar el derecho a intervenir en los asuntos públicos que acaban afectando a la vida cotidiana del conjunto de la sociedad. </p>
+  <p>El concepto Participación Ciudadana tiene un carácter transversal, ello plantea la necesidad de potenciar este concepto desde la cooperación Interadministrativa y el Trabajo en Red . En ese sentido esta ley va a suponer un avance en cuanto a la “construcción de espacios de diálogo, comunicación y codecisión ciudadana”.</p>
+
+  <p><a href="http://www.parlamentodeandalucia.es/webdinamica/portal-web-parlamento/pdf.do?tipodoc=bopa&id=117057"> Enlace proyecto de ley</a></p>
+  <p><a href="http://www.parlamentodeandalucia.es/webdinamica/portal-web-parlamento/actividadparlamentaria/tramitacionencurso/legislativas.do?numexp=10-16/PL-000005">Proceso de tramitación parlamentaria</a></p>
+</div>
 </div>
 
 <div class="section" id="mapa">
-  <div class="row">
-    <div class="col-sm-12">
-      <div id="map"></div>
-    </div>
+<div class="row">
+  <div class="col-sm-12">
+    <div id="map"></div>
   </div>
+</div>
 </div>
 
 <div class="section" id="calendario">
-  <div class="row">
-    <div class="container">
-      <div class="row">
-        <h2>Agenda</h2>
-        <hr/>
-      </div>      
-      <div id='calendar'></div>
-    </div>
+<div class="row">
+  <div class="container">
+    <div class="row">
+      <h2>Agenda</h2>
+      <hr/>
+    </div>      
+    <div id='calendar'></div>
   </div>
+</div>
 </div>
 
 <div class="section" id="sesiones">
-  <div class="row">
-    <div class="container">
-      <div class="row">
-        <h2>Resultados de las sesiones de trabajo de los Grupos Motores Locales</h2>
-        <hr/>
-      </div>      
-      <div id='sesions'>
-        <ul class="nav nav-tabs">
-          <li class="active"><a data-toggle="tab" href="#sesion1">Sesión 1</a></li>
-          <li><a data-toggle="tab" href="#sesion2">Sesión 2</a></li>
-          <li><a data-toggle="tab" href="#sesion3">Sesión 3</a></li>
-          <li><a class="disabled" href="#sesion4">Sesión 4</a></li>
-        </ul>
+<div class="row">
+  <div class="container">
+    <div class="row">
+      <h2>Resultados de las sesiones de trabajo de los Grupos Motores Locales</h2>
+      <hr/>
+    </div>      
+    <div id='sesions'>
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#sesion1">Sesión 1</a></li>
+        <li><a data-toggle="tab" href="#sesion2">Sesión 2</a></li>
+        <li><a data-toggle="tab" href="#sesion3">Sesión 3</a></li>
+        <li><a class="disabled" href="#sesion4">Sesión 4</a></li>
+      </ul>
 
-        <div class="tab-content">
-          <div id="sesion1" class="tab-pane fade in active">
-            <div class="row">
-              <div class="col-md-3" id="logo-seccion">
+      <div class="tab-content">
+        <div id="sesion1" class="tab-pane fade in active">
+          <div class="row">
+            <div class="col-md-3" id="logo-seccion">
               <li id="4-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/adra2.jpeg')"></a></li>
-                <h4 class="text-center">Adra</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
+              <h4 class="text-center">Adra</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
               <li id="5-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/almeria1.jpeg')"></a></li>
-                <h4 class="text-center">Almería</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
+              <h4 class="text-center">Almería</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
               <li id="14-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/ayamonte1.jpg')"></a></li>
-                <h4 class="text-center">Ayamonte</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
+              <h4 class="text-center">Ayamonte</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
               <li id="11-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/cadiz1.jpg')"></a></li>
-                <h4 class="text-center">Cádiz</h4>
-              </div>
+              <h4 class="text-center">Cádiz</h4>
             </div>
-            <div class="row">
-              <div class="col-md-3" id="logo-seccion">
+          </div>
+          <div class="row">
+            <div class="col-md-3" id="logo-seccion">
               <li id="9-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/cordoba1.jpg')"></a></li>
-                <h4 class="text-center">Córdoba</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
+              <h4 class="text-center">Córdoba</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
               <li id="2-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/granada1.jpeg')"></a></li>
-                <h4 class="text-center">Granada</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
+              <h4 class="text-center">Granada</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
               <li id="13-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/huelva2.jpg')"></a></li>
-                <h4 class="text-center">Huelva</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
+              <h4 class="text-center">Huelva</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
               <li id="6-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/jerez1.jpg')"></a></li>
-                <h4 class="text-center">Jerez de la Frontera</h4>
-              </div>
+              <h4 class="text-center">Jerez de la Frontera</h4>
             </div>
-            <div class="row">
-              <div class="col-md-3" id="logo-seccion">
+          </div>
+          <div class="row">
+            <div class="col-md-3" id="logo-seccion">
               <li id="8-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/linares2.jpg')"></a></li>
-                <h4 class="text-center">Linares</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
+              <h4 class="text-center">Linares</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
               <li id="12-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/malaga3.jpeg')"></a></li>
-                <h4 class="text-center">Malaga</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
+              <h4 class="text-center">Malaga</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
               <li id="3-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/maracena1.jpg')"></a></li>
-                <h4 class="text-center">Maracena</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
+              <h4 class="text-center">Maracena</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
               <li id="1-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/martos1.jpg')"></a></li>
-                <h4 class="text-center">Martos</h4>
-              </div>
+              <h4 class="text-center">Martos</h4>
             </div>
-            <div class="row">
-              <div class="col-md-3" id="logo-seccion">
+          </div>
+          <div class="row">
+            <div class="col-md-3" id="logo-seccion">
               <li id="10-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/nerja2.jpeg')"></a></li>
-                <h4 class="text-center">Nerja</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
+              <h4 class="text-center">Nerja</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
               <li id="7-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/palma2.jpg')"></a></li>
-                <h4 class="text-center">Palma del Río</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-                <li id="" class="pop"><a class="disabled"><img src="images/logos/roquetas.jpg"></a></li>
-                <h4 class="text-center">Roquetas de mar</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
+              <h4 class="text-center">Palma del Río</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="" class="pop"><a class="disabled"><img src="images/logos/roquetas.jpg"></a></li>
+              <h4 class="text-center">Roquetas de mar</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
               <li id="0-1" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/sevilla1.jpg')"></a></li>
-                <h4 class="text-center">Sevilla</h4>
-              </div>
-            </div>
-          </div>
-          <div id="sesion2" class="tab-pane fade">
-            <div class="row">
-              <div class="col-md-3" id="logo-seccion">
-              <li id="4-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/adra4.jpeg')"></a></li>
-                <h4 class="text-center">Adra</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="5-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/almeria5.jpeg')"></a></li>
-                <h4 class="text-center">Almería</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="14-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/ayamonte4.JPG')"></a></li>
-                <h4 class="text-center">Ayamonte</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="11-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/cadiz5.jpg')"></a></li>
-                <h4 class="text-center">Cádiz</h4>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3" id="logo-seccion">
-                <li id="9-2"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/cordoba.jpg')"></a></li>
-                <h4 class="text-center">Córdoba</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="2-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/granada4.jpg')"></a></li>
-                <h4 class="text-center">Granada</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="13-2"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/fichas/huelva4.JPG')"></a></li>
-                <h4 class="text-center">Huelva</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="6-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/jerez6.jpg')"></a></li>
-                <h4 class="text-center">Jerez de la Frontera</h4>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3" id="logo-seccion">
-              <li id="8-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/linares5.jpg')"></a></li>
-                <h4 class="text-center">Linares</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="12-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/malaga4.jpeg')"></a></li>
-                <h4 class="text-center">Malaga</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="3-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/maracena4.jpg')"></a></li>
-                <h4 class="text-center">Maracena</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="1-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/martos4.jpg')"></a></li>
-                <h4 class="text-center">Martos</h4>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3" id="logo-seccion">
-              <li id="10-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/nerja5.jpeg')"></a></li>
-                <h4 class="text-center">Nerja</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="7-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/palma4.jpg')"></a></li>
-                <h4 class="text-center">Palma del Río</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-                <li id="" class="pop"><a class="disabled"><img src="images/logos/roquetas.jpg"></a></li>
-                <h4 class="text-center">Roquetas de mar</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="0-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/sevilla4.JPG')"></a></li>
-                <h4 class="text-center">Sevilla</h4>
-              </div>
-            </div>
-          </div>
-          <div id="sesion3" class="tab-pane fade">
-            <div class="row">
-              <div class="col-md-3" id="logo-seccion">
-              <li id="4-3" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/adra8.JPG')"></a></li>
-                <h4 class="text-center">Adra</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="5-3" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/almeria7.jpg')"></a></li>
-                <h4 class="text-center">Almería</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-                <li id="14-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/ayamonte.jpg')"></a></li>
-                <h4 class="text-center">Ayamonte</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="11-3" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/cadiz7.jpg')"></a></li>
-                <h4 class="text-center">Cádiz</h4>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3" id="logo-seccion">
-                <li id="9-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/cordoba.jpg')"></a></li>
-                <h4 class="text-center">Córdoba</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-                <li id="2-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/granada.png')"></a></li>
-                <h4 class="text-center">Granada</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-                <li id="13-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/huelva.png')"></a></li>
-                <h4 class="text-center">Huelva</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-                <li id="6-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/jerez.png')"></a></li>
-                <h4 class="text-center">Jerez de la Frontera</h4>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3" id="logo-seccion">
-              <li id="8-3" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/linares6.jpg')"></a></li>
-                <h4 class="text-center">Linares</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="12-3" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/malaga5.jpg')"></a></li>
-                <h4 class="text-center">Malaga</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-                <li id="3-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/maracena.jpg')"></a></li>
-                <h4 class="text-center">Maracena</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="1-3" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/martos6.jpg')"></a></li>
-                <h4 class="text-center">Martos</h4>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3" id="logo-seccion">
-                <li id="10-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/nerja.png')"></a></li>
-                <h4 class="text-center">Nerja</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-              <li id="7-3" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/palma5.jpg')"></a></li>
-                <h4 class="text-center">Palma del Río</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-                <li id="" class="pop"><a class="disabled"><img src="images/logos/roquetas.jpg"></a></li>
-                <h4 class="text-center">Roquetas de mar</h4>
-              </div>
-              <div class="col-md-3" id="logo-seccion">
-                <li id="0-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/sevilla.jpg')"></a></li>
-                <h4 class="text-center">Sevilla</h4>
-              </div>
+              <h4 class="text-center">Sevilla</h4>
             </div>
           </div>
         </div>
-      </div>        
-    </div>
+        <div id="sesion2" class="tab-pane fade">
+          <div class="row">
+            <div class="col-md-3" id="logo-seccion">
+              <li id="4-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/adra4.jpeg')"></a></li>
+              <h4 class="text-center">Adra</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="5-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/almeria5.jpeg')"></a></li>
+              <h4 class="text-center">Almería</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="14-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/ayamonte4.JPG')"></a></li>
+              <h4 class="text-center">Ayamonte</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="11-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/cadiz5.jpg')"></a></li>
+              <h4 class="text-center">Cádiz</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3" id="logo-seccion">
+              <li id="9-2"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/cordoba.jpg')"></a></li>
+              <h4 class="text-center">Córdoba</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="2-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/granada4.jpg')"></a></li>
+              <h4 class="text-center">Granada</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="13-2"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/fichas/huelva4.JPG')"></a></li>
+              <h4 class="text-center">Huelva</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="6-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/jerez6.jpg')"></a></li>
+              <h4 class="text-center">Jerez de la Frontera</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3" id="logo-seccion">
+              <li id="8-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/linares5.jpg')"></a></li>
+              <h4 class="text-center">Linares</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="12-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/malaga4.jpeg')"></a></li>
+              <h4 class="text-center">Malaga</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="3-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/maracena4.jpg')"></a></li>
+              <h4 class="text-center">Maracena</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="1-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/martos4.jpg')"></a></li>
+              <h4 class="text-center">Martos</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3" id="logo-seccion">
+              <li id="10-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/nerja5.jpeg')"></a></li>
+              <h4 class="text-center">Nerja</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="7-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/palma4.jpg')"></a></li>
+              <h4 class="text-center">Palma del Río</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="" class="pop"><a class="disabled"><img src="images/logos/roquetas.jpg"></a></li>
+              <h4 class="text-center">Roquetas de mar</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="0-2" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/sevilla4.JPG')"></a></li>
+              <h4 class="text-center">Sevilla</h4>
+            </div>
+          </div>
+        </div>
+        <div id="sesion3" class="tab-pane fade">
+          <div class="row">
+            <div class="col-md-3" id="logo-seccion">
+              <li id="4-3" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/adra8.JPG')"></a></li>
+              <h4 class="text-center">Adra</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="5-3" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/almeria7.jpg')"></a></li>
+              <h4 class="text-center">Almería</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="14-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/ayamonte.jpg')"></a></li>
+              <h4 class="text-center">Ayamonte</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="11-3" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/cadiz7.jpg')"></a></li>
+              <h4 class="text-center">Cádiz</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3" id="logo-seccion">
+              <li id="9-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/cordoba.jpg')"></a></li>
+              <h4 class="text-center">Córdoba</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="2-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/granada.png')"></a></li>
+              <h4 class="text-center">Granada</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="13-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/huelva.png')"></a></li>
+              <h4 class="text-center">Huelva</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="6-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/jerez.png')"></a></li>
+              <h4 class="text-center">Jerez de la Frontera</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3" id="logo-seccion">
+              <li id="8-3" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/linares6.jpg')"></a></li>
+              <h4 class="text-center">Linares</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="12-3" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/malaga5.jpg')"></a></li>
+              <h4 class="text-center">Malaga</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="3-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/maracena.jpg')"></a></li>
+              <h4 class="text-center">Maracena</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="1-3" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/martos6.jpg')"></a></li>
+              <h4 class="text-center">Martos</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3" id="logo-seccion">
+              <li id="10-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/nerja.png')"></a></li>
+              <h4 class="text-center">Nerja</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="7-3" class="pop"><a data-toggle="modal" data-target="#modalSessions"><img src="images/image9.png" style="background-image: url('images/fichas/palma5.jpg')"></a></li>
+              <h4 class="text-center">Palma del Río</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="" class="pop"><a class="disabled"><img src="images/logos/roquetas.jpg"></a></li>
+              <h4 class="text-center">Roquetas de mar</h4>
+            </div>
+            <div class="col-md-3" id="logo-seccion">
+              <li id="0-3"><a class="disabled"><img src="images/image9.png" style="background-image: url('images/logos/sevilla.jpg')"></a></li>
+              <h4 class="text-center">Sevilla</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>        
   </div>
+</div>
 </div>
 </div>
 
 <div class="modal fade" id="modalSessions" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"></h4>
-      </div>
-      <div class="modal-body">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title"></h4>
+    </div>
+    <div class="modal-body">
+      <div class="row">
         <div class="row">
-          <div class="row">
-            <div class="col-md-1 col-md-offset-1 modal-logo text-justify">
-              <img src="" id="image-logo">
-            </div>
-            <div class="col-md-7" id="modal-logo-info">
-              <div class="col-md-7 modal-lugar text-justify"></div>
-              <div class="col-md-7 modal-fecha text-justify"></div>
-            </div>
+          <div class="col-md-1 col-md-offset-1 modal-logo text-justify">
+            <img src="" id="image-logo">
           </div>
-          <div class="col-md-5" id="info-modal">
-            <div class="col-md-12 col-md-offset-1" id="modal-fotografias">
-              <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" id="carousel-modal">
-                  <div class="item active">
-                    <img src="" id="image1-modal">
-                  </div>
+          <div class="col-md-7" id="modal-logo-info">
+            <div class="col-md-7 modal-lugar text-justify"></div>
+            <div class="col-md-7 modal-fecha text-justify"></div>
+          </div>
+        </div>
+        <div class="col-md-5" id="info-modal">
+          <div class="col-md-12 col-md-offset-1" id="modal-fotografias">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" id="carousel-modal">
+                <div class="item active">
+                  <img src="" id="image1-modal">
+                </div>
 
-                  <div class="item">
-                    <img src="" id="image2-modal">
-                  </div>
+                <div class="item">
+                  <img src="" id="image2-modal">
+                </div>
 
-                  <div class="item">
-                    <img src="" id="image3-modal">
-                  </div>
+                <div class="item">
+                  <img src="" id="image3-modal">
                 </div>
               </div>
             </div>
-            <div class="col-md-12 modal-video" id="video-modal-ins"> 
-             <div class="embed-responsive embed-responsive-4by3">
-              <iframe class="embed-responsive-item" id="video-modal" src=""></iframe>
-            </div>        
           </div>
-          <div class="col-md-10 col-md-offset-3"><a href="#" type="button" class="btn btn-default" id="modal-acta-button">Descargar el acta completa</a></div>
+          <div class="col-md-12 modal-video" id="video-modal-ins"> 
+           <div class="embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" id="video-modal" src=""></iframe>
+          </div>        
         </div>
-        <div class="col-md-5 col-md-offset-1">
-          <div class="col-md-12 modal-asistentes text-justify"></div>
-          <div class="col-md-12 modal-resumen text-justify"></div>
-          <div class="col-md-10 col-md-offset-2 text-justify">
-          </div>
-        </div>
+        <div class="col-md-10 col-md-offset-3"><a href="#" type="button" class="btn btn-default" id="modal-acta-button">Descargar el acta completa</a></div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      <div class="col-md-5 col-md-offset-1">
+        <div class="col-md-12 modal-asistentes text-justify"></div>
+        <div class="col-md-12 modal-resumen text-justify"></div>
+        <div class="col-md-10 col-md-offset-2 text-justify">
+        </div>
       </div>
     </div>
-  </div><!-- /.modal-content -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+    </div>
+  </div>
+</div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
 
 <div class="modal fade" id="modalBanco" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"></h4>
-      </div>
-      <div class="modal-body">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title"></h4>
+    </div>
+    <div class="modal-body">
+      <div class="row">
         <div class="row">
-          <div class="row">
-            <div class="col-md-1 col-md-offset-1 modal-logo text-justify">
-              <img src="" id="image-logo">
-            </div>
-            <div class="col-md-8" id="modal-logo-info">
-              <div class="col-md-12 modal-nombre text-justify"></div>
-              <div class="col-md-12 modal-organizacion text-justify"></div>
-              <div class="col-md-12 modal-empleo text-justify"></div>
-              <div class="col-md-12 modal-titulo text-justify"></div>
-              <div class="col-md-12 modal-web text-justify"></div>
-              <div class="col-md-12 modal-descripcion text-justify"></div>
-               <div class="col-md-10 col-md-offset-3"><a href="#" type="button" class="btn btn-default" id="modal-proyecto-button">Ir a la web del proyecto</a></div>
-            </div>
-            
-            </div>
-            <!--
-               <div class="row">
-		           <div class="col-md-5" id="info-modal">
-		            <div class="col-md-12 modal-video" id="video-modal-ins"> 
-		             <div class="embed-responsive embed-responsive-4by3">
-		              <iframe class="embed-responsive-item" id="video-modal" src=""></iframe>
-		            </div>        
-		            </div>
-		           </div> 
-               </div> -->
+          <div class="col-md-1 col-md-offset-1 modal-logo text-justify">
+            <img src="" id="image-logo">
+          </div>
+          <div class="col-md-8" id="modal-logo-info">
+            <div class="col-md-12 modal-nombre text-justify"></div>
+            <div class="col-md-12 modal-organizacion text-justify"></div>
+            <div class="col-md-12 modal-empleo text-justify"></div>
+            <div class="col-md-12 modal-titulo text-justify"></div>
+            <div class="col-md-12 modal-web text-justify"></div>
+            <div class="col-md-12 modal-descripcion text-justify"></div>
+            <div class="col-md-10 col-md-offset-3"><a href="#" type="button" class="btn btn-default" id="modal-proyecto-button">Ir a la web del proyecto</a></div>
+          </div>
+          
         </div>
+          <!--
+             <div class="row">
+	           <div class="col-md-5" id="info-modal">
+	            <div class="col-md-12 modal-video" id="video-modal-ins"> 
+	             <div class="embed-responsive embed-responsive-4by3">
+	              <iframe class="embed-responsive-item" id="video-modal" src=""></iframe>
+	            </div>        
+	            </div>
+	           </div> 
+           </div> -->
+         </div>
 
-      </div>
-      <div class="modal-footer">
+       </div>
+       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
       </div>
     </div>
@@ -760,971 +760,1141 @@
 </div><!-- /.modal -->
 
 <div class="section" id="laboratorio">
-  <div class="container">
-    <div class="row">
-      <h2>Laboratorio participativo</h2>
-      <hr/>
-    </div>
-    <div class="col-md-4">
-      <img src="./images/laboratorio.png" />
-    </div>
-    <div class="col-md-6 col-md-offset-2">
-      <p>El Laboratorio Participativo para el Gobierno Abierto y la Participación Ciudadana se convertirá en es un espacio de interactuación abierto que unirá a quienes integran los Grupos Motores de los 16 Ayuntamientos piloto y que les permitirá debatir, reflexionar, validar y tomar decisiones acerca de la adopción de medidas y políticas necesarias de participación ciudadana y gobierno abierto.</p>
-      <p>El Laboratorio Participativo para el Gobierno Abierto y la Participación Ciudadana tiene como objetivos:</p>
-      <ul>
-        <li>Favorecer el diálogo</li> 
-        <li>Compartir experiencias y buenas prácticas</li>
-        <li>Diseñar estrategias conjuntas por parte de quienes son Actores Locales que favorezcan la toma de decisiones y la mejora del servicio público en la Administración Local</li>
-        <li>Poner en contacto la necesidad de determinados agentes locales de encontrar soluciones a sus retos, con el conocimiento y creatividad de las personas de la comunidad que aportan sus ideas para solucionarlos.</li>
-      </ul>
-      <p>El Laboratorio Participativo para el Gobierno Abierto y la Participación Ciudadana forma parte del Observatorio Andaluz de la Participación Ciudadana. Un espacio abierto a través de Internet a todos los Gobiernos Locales de Andalucía y que constituye una herramienta útil y flexible que permite conocer, intercambiar y aplicar experiencias a propósito de la Participación Ciudadana y el movimiento voluntario en el ámbito local de nuestra Comunidad Autónoma </p>
-      <a href="http://www.famp.es/racs/observatorio/docinteres.php" target="_blank">Observatorio Participación Ciudadana FAMP</a>
-    </div>
-  </div>
-</div>
-
-
-
-
-
- <div class="section" id="banco">
-  <div class="container">
-    <div class="row">
-      <h2>Banco de talentos</h2>
-      <hr/>
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well well-sm">
-                <div class="row pop2" id="0">
-                    <a data-toggle="modal" data-target="#modalBanco">
-                    <div class="col-sm-6 col-md-2">
-                        <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>Francisco Toledano Barrera</h4>
-                        <p>
-                            <i class="fa fa-group"></i> PROMAR
-                            <br />
-                            <i class="fa fa-map-marker"></i>Adra
-                        </p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well well-sm">
-                <div class="row pop2" id="1">
-                    <a data-toggle="modal" data-target="#modalBanco">
-                    <div class="col-sm-6 col-md-2">
-                        <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>Judiht Cusio Rodriguez </h4>
-                        <p>
-                            <i class="fa fa-group"></i> Cruz Roja Española
-                            <br />
-                            <i class="fa fa-map-marker"></i>Adra 
-                        </p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-<div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well well-sm">
-                <div class="row pop2" id="2">
-                    <a data-toggle="modal" data-target="#modalBanco">
-                    <div class="col-sm-6 col-md-2">
-                        <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>Mº del Rosario Alarcón López</h4>
-                        <p>
-                            <i class="fa fa-group"></i> ALMUR
-                            <br />
-                            <i class="fa fa-map-marker"></i>Almería
-                        </p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well well-sm">
-                <div class="row pop2" id="3">
-                    <a data-toggle="modal" data-target="#modalBanco">
-                    <div class="col-sm-6 col-md-2">
-                        <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>Jorgue García Luján </h4>
-                        <p>
-                            <i class="fa fa-group"></i> Consorcio Poniente Granadino
-                            <br />
-                            <i class="fa fa-map-marker"></i>Adra
-                        </p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>    
-<div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well well-sm">
-                <div class="row pop2" id="4">
-                    <a data-toggle="modal" data-target="#modalBanco">
-                    <div class="col-sm-6 col-md-2">
-                        <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>Mª del Mar Díez Simón</h4>
-                        <p>
-                            <i class="fa fa-group"></i> FAVA SIGLO XIX
-                            <br />
-                            <i class="fa fa-map-marker"></i>Almería
-                        </p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well well-sm">
-                <div class="row pop2" id="5">
-                    <a data-toggle="modal" data-target="#modalBanco">
-                    <div class="col-sm-6 col-md-2">
-                        <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>Mª Francisca Peñarroya Sánchez </h4>
-                        <p>
-                            <i class="fa fa-group"></i> Federación Provincial de Asociaciones de Mujeres Ágora- Málaga
-                            <br />
-                            <i class="fa fa-map-marker"></i>Málaga
-                        </p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>    
-<div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well well-sm">
-                <div class="row pop2" id="6">
-                    <a data-toggle="modal" data-target="#modalBanco">
-                    <div class="col-sm-6 col-md-2">
-                        <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>Alicia Martín Fernández</h4>
-                        <p>
-                            <i class="fa fa-group"></i> Federación Mistra; Asociación Acrem
-                            <br />
-                            <i class="fa fa-map-marker"></i>Málaga
-                        </p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well well-sm">
-                <div class="row pop2" id="7">
-                    <a data-toggle="modal" data-target="#modalBanco">
-                    <div class="col-sm-6 col-md-2">
-                        <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>Sergio Pino Fernández </h4>
-                        <p>
-                            <i class="fa fa-group"></i> Cruz Roja España
-                            <br />
-                            <i class="fa fa-map-marker"></i>Ayamonte 
-                        </p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>    
-<div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well well-sm">
-                <div class="row pop2" id="8">
-                    <a data-toggle="modal" data-target="#modalBanco">
-                    <div class="col-sm-6 col-md-2">
-                        <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>Francisca Aguilera Martín </h4>
-                        <p>
-                            <i class="fa fa-group"></i> Asociación Alzheimer
-                            <br />
-                            <i class="fa fa-map-marker"></i>Ayamonte 
-                        </p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well well-sm">
-                <div class="row pop2" id="9">
-                    <a data-toggle="modal" data-target="#modalBanco">
-                    <div class="col-sm-6 col-md-2">
-                        <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>María Francisca Peñarroya Sánchez </h4>
-                        <p>
-                            <i class="fa fa-group"></i> Agente de la propiedad inmobiliaria y empresaria. Presidenta de mujeres Kartio
-                            <br />
-                            <i class="fa fa-map-marker"></i>Málaga
-                        </p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>    
-<div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well well-sm">
-                <div class="row pop2" id="10">
-                    <a data-toggle="modal" data-target="#modalBanco">
-                    <div class="col-sm-6 col-md-2">
-                        <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4> Marcos Galdames Durán</h4>
-                        <p>
-                            <i class="fa fa-group"></i> AFAJE
-                            <br />
-                            <i class="fa fa-map-marker"></i>Ayamonte
-                        </p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well well-sm">
-                <div class="row pop2" id="11">
-                    <a data-toggle="modal" data-target="#modalBanco">
-                    <div class="col-sm-6 col-md-2">
-                        <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>Nuria Morales Magro </h4>
-                        <p>
-                            <i class="fa fa-group"></i> AFAJE
-                            <br />
-                            <i class="fa fa-map-marker"></i>Ayamonte 
-                        </p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>    
-<div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well well-sm">
-                <div class="row pop2" id="12">
-                    <a data-toggle="modal" data-target="#modalBanco">
-                    <div class="col-sm-6 col-md-2">
-                        <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>Óscar Toro Pesa</h4>
-                        <p>
-                            <i class="fa fa-group"></i> Plan Integral Distrito 5 de la Ciudad de Huelva
-                            <br />
-                            <i class="fa fa-map-marker"></i>Huelva
-                        </p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
-            <div class="well well-sm">
-                <div class="row pop2" id="13">
-                    <a data-toggle="modal" data-target="#modalBanco">
-                    <div class="col-sm-6 col-md-2">
-                        <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
-                    </div>
-                    <div class="col-sm-6 col-md-8">
-                        <h4>Manuela García Fernández </h4>
-                        <p>
-                            <i class="fa fa-group"></i> Cruz Roja Española
-                            <br />
-                            <i class="fa fa-map-marker"></i>Huelva 
-                        </p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>    
-</div>
-
-    </div>
-  </div>
-</div>
- 
-<div class="section" id="mercado">
- <div class="container">
   <div class="row">
-    <h2>Mercado de Ideas</h2>
+    <h2>Laboratorio participativo</h2>
     <hr/>
   </div>
-  <div class="col-md-5">
-    <p>La interdependencia global, las tecnologías de la información y la comunicación, y las nuevas filosofías de comportamiento como la responsabilidad social han provocado un ambiente complejo para las organizaciones. En este contexto, reviste gran importancia la adecuada promoción del talento en las empresas y las organizaciones como elemento generador de conocimiento, sostenibilidad y ventajas competitivas.</p>
-    <p>Buscamos resultados que nos permitan responder a las demandas y cambios en la  Administración Local acercándola a la excelencia y mejorando los servicios públicos. El reto para las organizaciones hoy en día está en la identificación de las brechas de talento crítico existentes y su capacidad real para desarrollar e implementar estrategias.  Por ello, se hace esencial crear sistemas de gestión humana que estén centrados en prácticas de valores organizacionales, para lograr altos niveles de compromiso y desempeño.</p>
-    <p>Si estás interesada/o en formar parte de éste Banco de Talentos o tienes una idea que quieras compartir/transferir en nuestro Mercado de Ideas, este es tu espacio.  Contacta con la Unidad de Gestión: <a href="mailto:foroandaluzparticipacionyprocesosparticipativos@famp.es">foroandaluzparticipacionyprocesosparticipativos@famp.es</a>.</p>
+  <div class="col-md-4">
+    <img src="./images/laboratorio.png" />
   </div>
-  <div class="col-md-4 col-md-offset-1">
-    <img src="./images/mercado.jpg" />
-  </div>   
+  <div class="col-md-6 col-md-offset-2">
+    <p>El Laboratorio Participativo para el Gobierno Abierto y la Participación Ciudadana se convertirá en es un espacio de interactuación abierto que unirá a quienes integran los Grupos Motores de los 16 Ayuntamientos piloto y que les permitirá debatir, reflexionar, validar y tomar decisiones acerca de la adopción de medidas y políticas necesarias de participación ciudadana y gobierno abierto.</p>
+    <p>El Laboratorio Participativo para el Gobierno Abierto y la Participación Ciudadana tiene como objetivos:</p>
+    <ul>
+      <li>Favorecer el diálogo</li> 
+      <li>Compartir experiencias y buenas prácticas</li>
+      <li>Diseñar estrategias conjuntas por parte de quienes son Actores Locales que favorezcan la toma de decisiones y la mejora del servicio público en la Administración Local</li>
+      <li>Poner en contacto la necesidad de determinados agentes locales de encontrar soluciones a sus retos, con el conocimiento y creatividad de las personas de la comunidad que aportan sus ideas para solucionarlos.</li>
+    </ul>
+    <p>El Laboratorio Participativo para el Gobierno Abierto y la Participación Ciudadana forma parte del Observatorio Andaluz de la Participación Ciudadana. Un espacio abierto a través de Internet a todos los Gobiernos Locales de Andalucía y que constituye una herramienta útil y flexible que permite conocer, intercambiar y aplicar experiencias a propósito de la Participación Ciudadana y el movimiento voluntario en el ámbito local de nuestra Comunidad Autónoma </p>
+    <a href="http://www.famp.es/racs/observatorio/docinteres.php" target="_blank">Observatorio Participación Ciudadana FAMP</a>
+  </div>
+</div>
+</div>
+
+
+
+
+
+<div class="section" id="banco">
+<div class="container">
+  <div class="row">
+    <h2>Banco de talentos</h2>
+    <hr/>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm">
+            <div class="row pop2" id="0">
+              <a data-toggle="modal" data-target="#modalBanco">
+                <div class="col-sm-6 col-md-2">
+                  <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                  <h4>Francisco Toledano Barrera</h4>
+                  <p>
+                    <i class="fa fa-group"></i> PROMAR
+                    <br />
+                    <i class="fa fa-map-marker"></i>Adra
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm">
+            <div class="row pop2" id="1">
+              <a data-toggle="modal" data-target="#modalBanco">
+                <div class="col-sm-6 col-md-2">
+                  <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                  <h4>Judiht Cusio Rodriguez </h4>
+                  <p>
+                    <i class="fa fa-group"></i> Cruz Roja Española
+                    <br />
+                    <i class="fa fa-map-marker"></i>Adra 
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm">
+            <div class="row pop2" id="2">
+              <a data-toggle="modal" data-target="#modalBanco">
+                <div class="col-sm-6 col-md-2">
+                  <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                  <h4>Mº del Rosario Alarcón López</h4>
+                  <p>
+                    <i class="fa fa-group"></i> ALMUR
+                    <br />
+                    <i class="fa fa-map-marker"></i>Almería
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm">
+            <div class="row pop2" id="3">
+              <a data-toggle="modal" data-target="#modalBanco">
+                <div class="col-sm-6 col-md-2">
+                  <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                  <h4>Jorgue García Luján </h4>
+                  <p>
+                    <i class="fa fa-group"></i> Consorcio Poniente Granadino
+                    <br />
+                    <i class="fa fa-map-marker"></i>Adra
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>    
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm">
+            <div class="row pop2" id="4">
+              <a data-toggle="modal" data-target="#modalBanco">
+                <div class="col-sm-6 col-md-2">
+                  <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                  <h4>Mª del Mar Díez Simón</h4>
+                  <p>
+                    <i class="fa fa-group"></i> FAVA SIGLO XIX
+                    <br />
+                    <i class="fa fa-map-marker"></i>Almería
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm">
+            <div class="row pop2" id="5">
+              <a data-toggle="modal" data-target="#modalBanco">
+                <div class="col-sm-6 col-md-2">
+                  <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                  <h4>Mª Francisca Peñarroya Sánchez </h4>
+                  <p>
+                    <i class="fa fa-group"></i> Federación Provincial de Asociaciones de Mujeres Ágora- Málaga
+                    <br />
+                    <i class="fa fa-map-marker"></i>Málaga
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>    
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm">
+            <div class="row pop2" id="6">
+              <a data-toggle="modal" data-target="#modalBanco">
+                <div class="col-sm-6 col-md-2">
+                  <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                  <h4>Alicia Martín Fernández</h4>
+                  <p>
+                    <i class="fa fa-group"></i> Federación Mistra; Asociación Acrem
+                    <br />
+                    <i class="fa fa-map-marker"></i>Málaga
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm">
+            <div class="row pop2" id="7">
+              <a data-toggle="modal" data-target="#modalBanco">
+                <div class="col-sm-6 col-md-2">
+                  <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                  <h4>Sergio Pino Fernández </h4>
+                  <p>
+                    <i class="fa fa-group"></i> Cruz Roja España
+                    <br />
+                    <i class="fa fa-map-marker"></i>Ayamonte 
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>    
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm">
+            <div class="row pop2" id="8">
+              <a data-toggle="modal" data-target="#modalBanco">
+                <div class="col-sm-6 col-md-2">
+                  <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                  <h4>Francisca Aguilera Martín </h4>
+                  <p>
+                    <i class="fa fa-group"></i> Asociación Alzheimer
+                    <br />
+                    <i class="fa fa-map-marker"></i>Ayamonte 
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm">
+            <div class="row pop2" id="9">
+              <a data-toggle="modal" data-target="#modalBanco">
+                <div class="col-sm-6 col-md-2">
+                  <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                  <h4>María Francisca Peñarroya Sánchez </h4>
+                  <p>
+                    <i class="fa fa-group"></i> Agente de la propiedad inmobiliaria y empresaria. Presidenta de mujeres Kartio
+                    <br />
+                    <i class="fa fa-map-marker"></i>Málaga
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>    
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm">
+            <div class="row pop2" id="10">
+              <a data-toggle="modal" data-target="#modalBanco">
+                <div class="col-sm-6 col-md-2">
+                  <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                  <h4> Marcos Galdames Durán</h4>
+                  <p>
+                    <i class="fa fa-group"></i> AFAJE
+                    <br />
+                    <i class="fa fa-map-marker"></i>Ayamonte
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm">
+            <div class="row pop2" id="11">
+              <a data-toggle="modal" data-target="#modalBanco">
+                <div class="col-sm-6 col-md-2">
+                  <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                  <h4>Nuria Morales Magro </h4>
+                  <p>
+                    <i class="fa fa-group"></i> AFAJE
+                    <br />
+                    <i class="fa fa-map-marker"></i>Ayamonte 
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>    
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm">
+            <div class="row pop2" id="12">
+              <a data-toggle="modal" data-target="#modalBanco">
+                <div class="col-sm-6 col-md-2">
+                  <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                  <h4>Óscar Toro Pesa</h4>
+                  <p>
+                    <i class="fa fa-group"></i> Plan Integral Distrito 5 de la Ciudad de Huelva
+                    <br />
+                    <i class="fa fa-map-marker"></i>Huelva
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="well well-sm">
+            <div class="row pop2" id="13">
+              <a data-toggle="modal" data-target="#modalBanco">
+                <div class="col-sm-6 col-md-2">
+                  <img src="./images/profile.png" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                  <h4>Manuela García Fernández </h4>
+                  <p>
+                    <i class="fa fa-group"></i> Cruz Roja Española
+                    <br />
+                    <i class="fa fa-map-marker"></i>Huelva 
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+
+  </div>
+</div>
+</div>
+
+<div class="section" id="mercado">
+<div class="container">
+<div class="row">
+  <h2>Mercado de Ideas</h2>
+  <hr/>
+</div>
+<div class="col-md-5">
+
+  <p>La interdependencia global, las tecnologías de la información y la comunicación, y las nuevas filosofías de comportamiento como la responsabilidad social han provocado un ambiente complejo para las organizaciones. En este contexto, reviste gran importancia la adecuada promoción del talento en las empresas y las organizaciones como elemento generador de conocimiento, sostenibilidad y ventajas competitivas.</p>
+  <p>Buscamos resultados que nos permitan responder a las demandas y cambios en la  Administración Local acercándola a la excelencia y mejorando los servicios públicos. El reto para las organizaciones hoy en día está en la identificación de las brechas de talento crítico existentes y su capacidad real para desarrollar e implementar estrategias.  Por ello, se hace esencial crear sistemas de gestión humana que estén centrados en prácticas de valores organizacionales, para lograr altos niveles de compromiso y desempeño.</p>
+  <p>Si estás interesada/o en formar parte de éste Banco de Talentos o tienes una idea que quieras compartir/transferir en nuestro Mercado de Ideas, este es tu espacio.  Contacta con la Unidad de Gestión: <a href="mailto:foroandaluzparticipacionyprocesosparticipativos@famp.es">foroandaluzparticipacionyprocesosparticipativos@famp.es</a>.</p>
+</div>
+<div class="col-md-4 col-md-offset-1">
+  <img src="./images/mercado.jpg" />
+</div>   
 </div>
 
 
 <div class="modal fade" id="modalMercado" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"></h4>
-      </div>
-      <div class="modal-body">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title"></h4>
+    </div>
+    <div class="modal-body">
+      <div class="row">
         <div class="row">
-          <div class="row">
-            <div class="col-md-1 col-md-offset-1 modal-logo text-justify">
-              <img src="" id="image-logo">
-            </div>
-            <div class="col-md-4" id="modal-logo-info">
-              <div class="col-md-12 modal-nombre text-justify"></div>
-              <div class="col-md-12 modal-ambito text-justify"></div>
-              <div class="col-md-12 modal-fecha text-justify"></div>
-            </div>
-             <div class="col-md-5" id="modal-logo-info">
-              <div class="col-md-12 modal-titulo text-justify"></div>
-              <div class="col-md-12 modal-web text-justify"></div>
-            </div>
+          <div class="col-md-1 col-md-offset-1 modal-logo text-justify">
+            <img src="" id="image-logo">
           </div>
-          <div class="col-md-5" id="info-modal">
-            <div class="col-md-12 modal-video" id="video-modal-ins"> 
-             <div class="embed-responsive embed-responsive-4by3">
-              <iframe class="embed-responsive-item" id="video-modal" src=""></iframe>
-            </div>        
+          <div class="col-md-4" id="modal-logo-info">
+            <div class="col-md-12 modal-nombre text-justify"></div>
+            <div class="col-md-12 modal-ambito text-justify"></div>
+            <div class="col-md-12 modal-fecha text-justify"></div>
           </div>
-          <div class="col-md-10 col-md-offset-3"><a href="#" type="button" class="btn btn-default" id="modal-proyecto-button">Ir a la web del proyecto</a></div>
-        </div>
-        <div class="col-md-5 col-md-offset-1">
-          <div class="col-md-12 modal-descripcion text-justify"></div>
-          <div class="col-md-10 col-md-offset-2 text-justify">
+          <div class="col-md-5" id="modal-logo-info">
+            <div class="col-md-12 modal-titulo text-justify"></div>
+            <div class="col-md-12 modal-web text-justify"></div>
           </div>
         </div>
+        <div class="col-md-5" id="info-modal">
+          <div class="col-md-11 col-md-offset-1 modalMercado-image">
+            <img src="" id="image1-modalMercado">
+          </div>
+          <div class="col-md-12 modalMercado-video" id="video-modalMercado"> 
+           <div class="embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" id="video-modalMercado" src=""></iframe>
+          </div>        
+        </div>
+        <div class="col-md-10 col-md-offset-3"><a href="#" type="button" class="btn btn-default" id="modal-proyecto-button">Ir a la web del proyecto</a></div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      <div class="col-md-5 col-md-offset-1">
+        <div class="col-md-12 modal-descripcion text-justify"></div>
+        <div class="col-md-10 col-md-offset-2 text-justify">
+        </div>
       </div>
     </div>
-  </div><!-- /.modal-content -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+    </div>
+  </div>
+</div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
 <!-- Fichas mercado de ideas -->
 
-<div class="container">
-    <div class="row">
-      <h2>Mercado de ideas</h2>
-      <hr/>
-      <div class="tab-content">
-        <div id="bancofichas" class="tab-pane fade in active">
-          <div class="row">
-            <div class="col-md-3" id="logo-seccion">
-              <li id="0" class="pop3"><a data-toggle="modal" data-target="#modalMercado"><img src="" style="background-image: url('images/mercado/martos2.jpg')"></a></li>
-              <h4 class="text-center">Foros de participación y recogida de propuestas</h4>
+<div class="container" id="fichas-mercado">
+<div class="row">
+  <h2>Mercado de ideas</h2>
+  <hr/>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <a data-toggle="modal" data-target="#modalMercado">
+        <div class="well well-sm">
+          <div class="row pop3" id="0">
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/mercado/martos2.jpg" alt="" class="img-rounded img-responsive" />
             </div>
-            <div class="col-md-3" id="logo-seccion">
-              <li id="1" class="pop3"><a data-toggle="modal" data-target="#modalMercado"><img src="" style="background-image: url('images/mercado/palma2.jpg')"></a></li>
-              <h4 class="text-center">Propuestas Ciudadanas para los Presupuestos Municipales y Ordenanzas Fiscales del 2018</h4>
+            <div class="col-sm-6 col-md-8">
+              <h4>Foros de participación y recogida de propuestas</h4>
+              <p>
+                <i class="fa fa-info"></i>Ámbito Local
+                <br />
+                <i class="fa fa-map-marker"></i> Martos                  
+              </p>
             </div>
-            <div class="col-md-3" id="logo-seccion">
-              <li id="2" class="pop3"><a data-toggle="modal" data-target="#modalMercado"><img src="" style="background-image: url('images/logo2.png')"></a></li>
-              <h4 class="text-center">Propuestas Ciudadanas para los Presupuestos Municipales y Ordenanzas Fiscales del 2018</h4>
-            </div>
-            
-            <div class="col-md-3" id="logo-seccion">
-              <li id="3" class="pop3"><a data-toggle="modal" data-target="#modalMercado"><img src="" style="background-image: url('images/logo2.png')"></a></li>
-              <h4 class="text-center">Diagnóstico Participativo de la situación socioeconómica</h4>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3" id="logo-seccion">
-              <li id="4" class="pop3"><a data-toggle="modal" data-target="#modalMercado"><img src="" style="background-image: url('images/mercado/maracena.jpg')"></a></li>
-              <h4 class="text-center">APP Maracena se mueve</h4>
-            </div>            
-            
-            <div class="col-md-3" id="logo-seccion">
-              <li id="5" class="pop3"><a data-toggle="modal" data-target="#modalMercado"><img src="" style="background-image: url('images/mercado/sevilla-edemo.jpg')"></a></li>
-              <h4 class="text-center">E-democracia</h4>
-            </div>      
-            
-            <div class="col-md-3" id="logo-seccion">
-              <li id="6" class="pop3"><a data-toggle="modal" data-target="#modalMercado"><img src="" style="background-image: url('images/mercado/sevilla-decide2.jpg')"></a></li>
-              <h4 class="text-center">Decide Sevilla</h4>
-            </div>
-            
-            <div class="col-md-3" id="logo-seccion">
-              <li id="7" class="pop3"><a data-toggle="modal" data-target="#modalMercado"><img src="" style="background-image: url('images/mercado/sevilla_010.jpg')"></a></li>
-              <h4 class="text-center">010 Línea Sevilla</h4>
-            </div>            
-           </div>
-             <div class="row"> 
-            <div class="col-md-3" id="logo-seccion">
-              <li id="8" class="pop3"><a data-toggle="modal" data-target="#modalMercado"><img src="" style="background-image: url('images/mercado/benalmedena.jpg')"></a></li>
-              <h4 class="text-center">Portal de participación y decisión ciudadana en Benalmádena</h4>
-            </div>  
-            
-            <div class="col-md-3" id="logo-seccion">
-              <li id="9" class="pop3"><a data-toggle="modal" data-target="#modalMercado"><img src="" style="background-image: url('images/mercado/ciudades_amigas.jpg')"></a></li>
-              <h4 class="text-center">Ciudades Amigas de la Infancia</h4>
-            </div>
-            
-            <div class="col-md-3" id="logo-seccion">
-              <li id="10" class="pop3"><a data-toggle="modal" data-target="#modalMercado"><img src="" style="background-image: url('images/logo2.png')"></a></li>
-              <h4 class="text-center">Consejo Económico y Social</h4>
-            </div>            
-
           </div>
         </div>
-      </div>
-
+      </a>
     </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <a data-toggle="modal" data-target="#modalMercado">
+        <div class="well well-sm">
+          <div class="row pop3" id="1">
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/mercado/palma2.jpg" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-sm-6 col-md-8">
+              <h4>Propuestas Ciudadanas para los Presupuestos Municipales y Ordenanzas Fiscales del 2018</h4>
+              <p>
+                <i class="fa fa-info"></i>Ámbito Local
+                <br />
+                <i class="fa fa-map-marker"></i> Palma del Río                  
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <a data-toggle="modal" data-target="#modalMercado">
+        <div class="well well-sm">
+          <div class="row pop3" id="2">
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/logo2.png" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-sm-6 col-md-8">
+              <h4>Propuestas Ciudadanas para los Presupuestos Municipales y Ordenanzas Fiscales del 2018</h4>
+              <p>
+                <i class="fa fa-info"></i>Ámbito Local
+                <br />
+                <i class="fa fa-map-marker"></i> Martos                  
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <a data-toggle="modal" data-target="#modalMercado">
+        <div class="well well-sm">
+          <div class="row pop3" id="3">
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/logo2.png" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-sm-6 col-md-8">
+              <h4>Diagnóstico Participativo de la situación socioeconómica</h4>
+              <p>
+                <i class="fa fa-info"></i>Ámbito Local
+                <br />
+                <i class="fa fa-map-marker"></i> Granada             
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div> 
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <a data-toggle="modal" data-target="#modalMercado">
+        <div class="well well-sm">
+          <div class="row pop3" id="4">
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/mercado/maracena.jpg" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-sm-6 col-md-8">
+              <h4>APP Maracena se mueve</h4>
+              <p>
+                <i class="fa fa-info"></i>Ámbito Local
+                <br />
+                <i class="fa fa-map-marker"></i> Maracena                  
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <a data-toggle="modal" data-target="#modalMercado">
+        <div class="well well-sm">
+          <div class="row pop3" id="5">
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/mercado/sevilla-edemo.jpg" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-sm-6 col-md-8">
+              <h4>E-Democracia</h4>
+              <p>
+                <i class="fa fa-info"></i>Ámbito Local
+                <br />
+                <i class="fa fa-map-marker"></i> Sevilla             
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>            
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <a data-toggle="modal" data-target="#modalMercado">
+        <div class="well well-sm">
+          <div class="row pop3" id="6">
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/mercado/sevilla-decide2.jpg" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-sm-6 col-md-8">
+              <h4>Decide Sevilla</h4>
+              <p>
+                <i class="fa fa-info"></i>Ámbito Local
+                <br />
+                <i class="fa fa-map-marker"></i> Sevilla                  
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <a data-toggle="modal" data-target="#modalMercado">
+        <div class="well well-sm">
+          <div class="row pop3" id="7">
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/mercado/sevilla_010.jpg" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-sm-6 col-md-8">
+              <h4>010 Línea Sevilla</h4>
+              <p>
+                <i class="fa fa-info"></i>Ámbito Autonómico
+                <br />
+                <i class="fa fa-map-marker"></i> Sevilla             
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>    
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <a data-toggle="modal" data-target="#modalMercado">
+        <div class="well well-sm">
+          <div class="row pop3" id="8">
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/mercado/benalmedena.jpg" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-sm-6 col-md-8">
+              <h4>Portal de participación y decisión ciudadana en Benalmádena</h4>
+              <p>
+                <i class="fa fa-info"></i>Ámbito Local
+                <br />
+                <i class="fa fa-map-marker"></i> Sevilla                  
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <a data-toggle="modal" data-target="#modalMercado">
+        <div class="well well-sm">
+          <div class="row pop3" id="9">
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/mercado/ciudades_amigas.jpg" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-sm-6 col-md-8">
+              <h4>Ciudades Amigas de la Infancia</h4>
+              <p>
+                <i class="fa fa-info"></i>Ámbito Nacional
+                <br />
+                <i class="fa fa-map-marker"></i> Ayamonte             
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <a data-toggle="modal" data-target="#modalMercado">
+        <div class="well well-sm">
+          <div class="row pop3" id="10">
+            <div class="col-sm-6 col-md-4">
+              <img src="./images/logo2.png" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-sm-6 col-md-8">
+              <h4>Consejo Económico y Social</h4>
+              <p>
+                <i class="fa fa-info"></i>Ámbito Local
+                <br />
+                <i class="fa fa-map-marker"></i> Ayamonte             
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>                        
   </div>
+</div>
 
 </div>
 
 
 <div class="section" id="recursos">
- <div class="container">
-  <div class="row">
-    <h2>Recursos para la participación ciudadana</h2>
-    <hr/>
-  </div>
-  <p>Publicaciones</p>
-  <ul>
-    <li><p><a href="http://www.famp.es/racs/observatorio/MATERIAL/Libro_blanco_gobernanza_CAST.pdf" target="_blank">Libro Blanco Gobernanza Multinivel</a></p></li>
-    <li><p><a href="http://www.famp.es/racs/observatorio/MATERIAL/Libro_Blanco_Gobierno_Local.pdf" target="_blank">Libro Blanco Gobierno Local</a></p></li>
-    <li><p><a href="http://www.famp.es/racs/observatorio/MATERIAL/GLOSARIO%20ABIERTO%20DE%20PARTICIPACION%20CIUDADANAx.pdf" target="_blank">Glosario de Participación Ciudadana</a></p></li>
-  </ul>
-  <p>Normativa</p>
-  <ul>
-    <li><p><a href="http://www.parlamentodeandalucia.es/webdinamica/portal-web-parlamento/pdf.do?tipodoc=bopa&id=117057" target="_blank">Proyecto de ley</a></p></li>
-    <li><p><a href="http://www.parlamentodeandalucia.es/webdinamica/portal-web-parlamento/actividadparlamentaria/tramitacionencurso/legislativas.do?numexp=10-16/PL-000005" target="_blank">Proceso de tramitación parlamentaria</a></p></li>
-  </ul>
-  <p>Otros Documentos de Interés</p>
-  <ul>
-    <li><a href="http://www.famp.es/racs/observatorio/docinteres.php" target="_blank">Observatorio Participación Ciudadana FAMP</a></p></li>
-    <li><a href="http://www.famp.es/famp/intranet/documentos/convenios/CONVENIO_ESPECIFICO_RADIA.pdf" target="_blank">Red de Agentes para el desarrollo inteligente de Andalucía</a></p></li>
-  </ul>
+<div class="container">
+<div class="row">
+  <h2>Recursos para la participación ciudadana</h2>
+  <hr/>
+</div>
+<p>Publicaciones</p>
+<ul>
+  <li><p><a href="http://www.famp.es/racs/observatorio/MATERIAL/Libro_blanco_gobernanza_CAST.pdf" target="_blank">Libro Blanco Gobernanza Multinivel</a></p></li>
+  <li><p><a href="http://www.famp.es/racs/observatorio/MATERIAL/Libro_Blanco_Gobierno_Local.pdf" target="_blank">Libro Blanco Gobierno Local</a></p></li>
+  <li><p><a href="http://www.famp.es/racs/observatorio/MATERIAL/GLOSARIO%20ABIERTO%20DE%20PARTICIPACION%20CIUDADANAx.pdf" target="_blank">Glosario de Participación Ciudadana</a></p></li>
+</ul>
+<p>Normativa</p>
+<ul>
+  <li><p><a href="http://www.parlamentodeandalucia.es/webdinamica/portal-web-parlamento/pdf.do?tipodoc=bopa&id=117057" target="_blank">Proyecto de ley</a></p></li>
+  <li><p><a href="http://www.parlamentodeandalucia.es/webdinamica/portal-web-parlamento/actividadparlamentaria/tramitacionencurso/legislativas.do?numexp=10-16/PL-000005" target="_blank">Proceso de tramitación parlamentaria</a></p></li>
+</ul>
+<p>Otros Documentos de Interés</p>
+<ul>
+  <li><a href="http://www.famp.es/racs/observatorio/docinteres.php" target="_blank">Observatorio Participación Ciudadana FAMP</a></p></li>
+  <li><a href="http://www.famp.es/famp/intranet/documentos/convenios/CONVENIO_ESPECIFICO_RADIA.pdf" target="_blank">Red de Agentes para el desarrollo inteligente de Andalucía</a></p></li>
+</ul>
 </div>
 </div>
 
 
 
 <footer class="footer">
-  <div class="container">
-    <div class="row" id="links">
-      <div class="col-md-2 logo">
-        <img src="./images/consejeria.png">
-      </div>
-      <div class="col-md-2 logo">
-        <img src="./images/famp.png">
-      </div>
-      <div class="col-md-2 logo">
-        <img src="./images/logo.png">
-      </div>
-      <div class="col-md-6 social-icons">
-        <ul>
-          <li class="footer-title text-left" >UNIDAD DE GESTIÓN</a></li>
-          <li class="footer-title"><div class="col-md-1"><i class="fa fa-phone"></i></div>954659262 Ext. 172</li>
-          <li class="footer-title"><div class="col-md-1"><i class="fa fa-map-marker"></i></div> Federación Andaluza de Municipios y Provincias.<br><div class="col-md-offset-1">Avenida San Francisco Javier, 22. Ed. Hermes. 3ª pl.,  Mod. 14 (41018) Sevilla</div></li>
-        </ul>
-      </div>
+<div class="container">
+  <div class="row" id="links">
+    <div class="col-md-2 logo">
+      <img src="./images/consejeria.png">
     </div>
-    <div class="row">
-      <p>© 2017 Federación Andaluza de Municipios y Provincias</p>
+    <div class="col-md-2 logo">
+      <img src="./images/famp.png">
+    </div>
+    <div class="col-md-2 logo">
+      <img src="./images/logo.png">
+    </div>
+    <div class="col-md-6 social-icons">
+      <ul>
+        <li class="footer-title text-left" >UNIDAD DE GESTIÓN</a></li>
+        <li class="footer-title"><div class="col-md-1"><i class="fa fa-phone"></i></div>954659262 Ext. 172</li>
+        <li class="footer-title"><div class="col-md-1"><i class="fa fa-map-marker"></i></div> Federación Andaluza de Municipios y Provincias.<br><div class="col-md-offset-1">Avenida San Francisco Javier, 22. Ed. Hermes. 3ª pl.,  Mod. 14 (41018) Sevilla</div></li>
+      </ul>
     </div>
   </div>
+  <div class="row">
+    <p>© 2017 Federación Andaluza de Municipios y Provincias</p>
+  </div>
+</div>
 </footer>
 
 <script src="./js/map.js"></script>
 <script>
-  $(function() {
-    sessions2 = $.getJSON('data/banco.json');
-    $(".pop2").click(function(){
-      var pageTitle = $(this).attr('pageTitle');
-      var pageName = $(this).attr('pageName');
-      $("#modalBanco .modal-body .modal-nombre").html("<strong>Nombre:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].nombre);
+$(function() {
+  sessions2 = $.getJSON('data/banco.json');
+  $(".pop2").click(function(){
+    var pageTitle = $(this).attr('pageTitle');
+    var pageName = $(this).attr('pageName');
+    $("#modalBanco .modal-body .modal-nombre").html("<strong>Nombre:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].nombre);
 
-      $("#modalBanco .modal-body .modal-web").html("<strong>Página web:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].link);
-      $("#modalBanco .modal-title").html("BANCO DE TALENTOS - " + sessions2.responseJSON[$(this).attr('id')][0].nombre.toUpperCase() + ' - ' + sessions2.responseJSON[$(this).attr('id')][0].municipio.toUpperCase() + ' (' + sessions2.responseJSON[$(this).attr('id')][0].sesion.toUpperCase() + ')');
-      $("#modalBanco .modal-body .modal-organizacion").html("<strong>Organización:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].organizacion);
-      $("#modalBanco .modal-body .modal-empleo").html("<strong>Ocupación:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].empleo);
-      $("#modalBanco .modal-body .modal-logo img").attr("src", "images/logos/" + sessions2.responseJSON[$(this).attr('id')][0].municipio_logo);
-      $('#modalBanco .modal-video #video-modal').attr("src", sessions2.responseJSON[$(this).attr('id')][0].video);
-      $("#modalBanco .modal-body #modal-proyecto-button").attr('href',sessions2.responseJSON[$(this).attr('id')][0].link);
-      $("#modalBanco .modal-body .modal-titulo").html("<strong>Título del proyecto:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].titulo );
-      $("#modalBanco .modal-body .modal-descripcion").html("<strong>Descripción:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].descripcion);
+    $("#modalBanco .modal-body .modal-web").html("<strong>Página web:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].link);
+    $("#modalBanco .modal-title").html("BANCO DE TALENTOS - " + sessions2.responseJSON[$(this).attr('id')][0].nombre.toUpperCase() + ' - ' + sessions2.responseJSON[$(this).attr('id')][0].municipio.toUpperCase() + ' (' + sessions2.responseJSON[$(this).attr('id')][0].sesion.toUpperCase() + ')');
+    $("#modalBanco .modal-body .modal-organizacion").html("<strong>Organización:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].organizacion);
+    $("#modalBanco .modal-body .modal-empleo").html("<strong>Ocupación:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].empleo);
+    $("#modalBanco .modal-body .modal-logo img").attr("src", "images/logos/" + sessions2.responseJSON[$(this).attr('id')][0].municipio_logo);
+    $('#modalBanco .modal-video #video-modal').attr("src", sessions2.responseJSON[$(this).attr('id')][0].video);
+    $("#modalBanco .modal-body #modal-proyecto-button").attr('href',sessions2.responseJSON[$(this).attr('id')][0].link);
+    $("#modalBanco .modal-body .modal-titulo").html("<strong>Título del proyecto:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].titulo );
+    $("#modalBanco .modal-body .modal-descripcion").html("<strong>Descripción:</strong> " + sessions2.responseJSON[$(this).attr('id')][0].descripcion);
 
-      $("#modalBanco .modal-body").load(pageName);
-    });
-  });  
-</script>
-<script>
-  $(function() {
-    sessions3 = $.getJSON('data/mercado.json');
-    $(".pop3").click(function(){
-      var pageTitle = $(this).attr('pageTitle');
-      var pageName = $(this).attr('pageName');
-      $("#modalMercado .modal-body .modal-nombre").html("<strong>Nombre:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].nombre);
-
-      $("#modalMercado .modal-title").html("MERCADO DE IDEAS - " + sessions3.responseJSON[$(this).attr('id')][0].nombre.toUpperCase() + ' - ' + sessions3.responseJSON[$(this).attr('id')][0].municipio.toUpperCase() );
-      $("#modalMercado .modal-body .modal-organizacion").html("<strong>Organización:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].nombre);
-      $("#modalMercado .modal-body .modal-ambito").html("<strong>Ámbito:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].ambito);
-       $("#modalMercado .modal-body .modal-fecha").html("<strong>Fecha:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].fecha);
-      $("#modalMercado .modal-body .modal-logo img").attr("src", "images/logos/" + sessions3.responseJSON[$(this).attr('id')][0].municipio_logo);
-      $('#modalMercado .modal-video #video-modal').attr("src", sessions3.responseJSON[$(this).attr('id')][0].video);
-      $("#modalMercado .modal-body #modal-proyecto-button").attr('href',sessions3.responseJSON[$(this).attr('id')][0].link);
-      $("#modalMercado .modal-body .modal-titulo").html("<strong>Etiquetas:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].tags );
-      $("#modalMercado .modal-body .modal-descripcion").html("<strong>Descripción:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].descripcion);
-
-      $("#modalMercado .modal-body").load(pageName);
-    });
-  });  
-</script>
-<script>
-  $(function() {
-    sessions = $.getJSON('data/fichas.json');
-    $(".pop").click(function(){
-      var fotografias = sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].fotografias.split(',');
-      var pageTitle = $(this).attr('pageTitle');
-      var pageName = $(this).attr('pageName');
-      $(".modal .modal-title").html("GRUPO MOTOR LOCAL  " + sessions.responseJSON[$(this).attr('id').split('-')[0]][0].municipio.toUpperCase() + " - SESIÓN DE TRABAJO " + $(this).attr('id').split('-')[1]);
-      $(".modal .modal-body .modal-lugar").html("<strong>Lugar del encuentro:</strong> " + sessions.responseJSON[$(this).attr('id').split('-')[0]][0].municipio);
-      $(".modal .modal-body .modal-logo img").attr("src", "images/logos/" + sessions.responseJSON[$(this).attr('id').split('-')[0]][0].logo);
-      $(".modal .modal-body .modal-fecha").html("<strong>Fecha del encuentro:</strong> " + sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].fecha);
-      $(".modal .modal-body .modal-asistentes").html("<strong>Asistentes:</strong> " + sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].asistentes);
-      $(".modal .modal-body .modal-resumen").html("<strong>Resumen:</strong> " + sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].resumen);
-          //$(".modal .modal-body .modal-fotografias").html("Fotografias: " + sessions.responseJSON[$(this).attr('id').split('-')[0]][1][1].fotografias);
-          //$(".modal .modal-body .modal-video").html(sessions.responseJSON[$(this).attr('id').split('-')[0]][1][1].video);
-          if(fotografias.length == 1){
-            $('#carousel-modal #image1-modal').attr("src", 'images/fichas/' + fotografias);
-            $('#carousel-modal #image1-modal').parent().attr('class','item active');
-            $('#image2-modal').parent().remove();
-            $('#image3-modal').parent().remove();
-          } else if(fotografias.length == 2){
-            $('#carousel-modal #image1-modal').attr("src", 'images/fichas/' + fotografias[0]);
-            $('#carousel-modal #image2-modal').attr("src", 'images/fichas/' + fotografias[1]);
-            $('#image3-modal').parent().remove();
-          } else {
-            $('#carousel-modal #image1-modal').attr("src", 'images/fichas/' + fotografias[0]);
-            $('#carousel-modal #image2-modal').attr("src", 'images/fichas/' + fotografias[1]);
-            $('#carousel-modal #image3-modal').attr("src", 'images/fichas/' + fotografias[2]);
-          }
-          if(sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].video){
-            if(document.getElementById('video-modal-ins')){
-              $('.modal-video #video-modal').attr("src", sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].video);
-            } else { 
-              video = '<div class="embed-responsive embed-responsive-4by3"><iframe src="' + sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].video + '"></iframe></div>';
-              div = document.createElement('div');
-              div.className = "col-md-12 modal-video-ins";
-              div.innerHTML = video;
-              div.id = 'video-modal-ins'
-              document.getElementById('modal-fotografias').appendChild(div);
-            };
-          } else {
-            $('.modal-video #video-modal').parent().parent().remove();
-          }
-          $(".modal .modal-body .modal-acta").html("Acta: " + sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].acta);
-          $(".modal .modal-body .modal-area").css({"font-size": "3em", "text-align": "left", "font-style": "normal", "padding-bottom": "50px"});
-          $(".modal .modal-body .modal-partido").html($(this).attr('partido'));
-          $(".modal .modal-body #modal-acta-button").attr('href',sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].acta);
-
-          $(".modal .modal-body").load(pageName);
-        });
+    $("#modalBanco .modal-body").load(pageName);
+  });
 });  
-  $(document).ready(function() {
+</script>
+<script>
+$(function() {
+  sessions3 = $.getJSON('data/mercado.json');
+  $(".pop3").click(function(){
+    var pageTitle = $(this).attr('pageTitle');
+    var pageName = $(this).attr('pageName');
+    console.log($(this).attr('id'))
+    $("#modalMercado .modal-body .modal-nombre").html("<strong>Nombre:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].nombre);
 
-    $('#calendar').fullCalendar({
-      header: {
-        left: 'prev,next',
-        center: 'title',
-        right: 'month,basicWeek,basicDay,listMonth'
-      },
-      defaultDate: '2017-09-01',
-      locale: 'es',
-      navLinks: true, // can click day/week names to navigate views
-      editable: false,
-      eventLimit: true, // allow "more" link when too many events
-      events: [
-      {
-        title: 'S1 Jerez',
-        start: '2017-09-20',
-        color: "#23864d"
-      },
-      {
-        title: 'S1 Cádiz',
-        start: '2017-09-28',
-        color: "#23864d"
-      },
-      {
-        title: 'S1 Adra',
-        start: '2017-09-19',
-        color: "#23864d"
-      },
-      {
-        title: 'S1 Almería',
-        start: '2017-09-20',
-        color: "#23864d"
-      },
-      {
-        title: 'S1 Roquetas de Mar',
-        start: '2017-09-21',
-        color: "#23864d"
-      },
-      {
-        title: 'S1 Nerja',
-        start: '2017-09-26',
-        color: "#23864d"
-      },
-      {
-        title: 'S1 Málaga',
-        start: '2017-09-27',
-        color: "#23864d"
-      },
-      {
-        title: 'S1 Córdoba',
-        start: '2017-09-25',
-        color: "#23864d"
-      },
-      {
-        title: 'S1 Palma del Río',
-        start: '2017-09-14',
-        color: "#23864d"
-      },
-      {
-        title: 'S1 Martos',
-        start: '2017-09-13',
-        color: "#23864d"
-      },
-      {
-        title: 'S1 Linares',
-        start: '2017-09-18',
-        color: "#23864d"
-      },
-      {
-        title: 'S1 Granada',
-        start: '2017-09-21',
-        color: "#23864d"
-      },
-      {       
-        title: 'S1 Maracena',
-        start: '2017-09-18',
-        color: "#23864d"
-      },
-      {       
-        title: 'S1 Sevilla',
-        start: '2017-09-19',
-        color: "#23864d"
-      },
-      {       
-        title: 'S1 Huelva',
-        start: '2017-09-26',
-        color: "#23864d"
-      },
-      {       
-        title: 'S1 Ayamonte',
-        start: '2017-10-03',
-        color: "#23864d"
-      },
-      {       
-        title: 'S2 Jerez',
-        start: '2017-10-04',
-        color: "#de3527"
-      },
-      {       
-        title: 'S2 Cádiz',
-        start: '2017-10-05',
-        color: "#de3527"
-      },
-      {       
-        title: 'S2 Adra',
-        start: '2017-10-03',
-        color: "#de3527"
-      },
-      {       
-        title: 'S2 Almería',
-        start: '2017-10-18',
-        color: "#de3527"
-      },
-      {       
-        title: 'S2 Roquetas de Mar',
-        start: '2017-10-05',
-        color: "#de3527"
-      },
+    $("#modalMercado .modal-title").html("MERCADO DE IDEAS - " + sessions3.responseJSON[$(this).attr('id')][0].nombre.toUpperCase() + ' - ' + sessions3.responseJSON[$(this).attr('id')][0].municipio.toUpperCase() );
+    $("#modalMercado .modal-body .modal-organizacion").html("<strong>Organización:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].nombre);
+    $("#modalMercado .modal-body .modal-ambito").html("<strong>Ámbito:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].ambito);
+    $("#modalMercado .modal-body .modal-fecha").html("<strong>Fecha:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].fecha);
+    $("#modalMercado .modal-body .modal-logo img").attr("src", "images/logos/" + sessions3.responseJSON[$(this).attr('id')][0].municipio_logo);
+    $('#modalMercado .modalMercado-image #image1-modalMercado').attr("src", (sessions3.responseJSON[$(this).attr('id')][0].fotografia ? ('images/mercado/' + sessions3.responseJSON[$(this).attr('id')][0].fotografia) : ("images/logo2.png")));
+    // $('#modalMercado .modal-image #image1-modalMercado').attr("src", ('images/mercado/' + sessions3.responseJSON[$(this).attr('id')][0].fotografia) || ("images/logos/" + sessions3.responseJSON[$(this).attr('id')][0].municipio_logo));
+    $("#modalMercado .modal-body #modal-proyecto-button").attr('href',sessions3.responseJSON[$(this).attr('id')][0].link);
+    $("#modalMercado .modal-body .modal-titulo").html("<strong>Etiquetas:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].tags );
+    $("#modalMercado .modal-body .modal-descripcion").html("<strong>Descripción:</strong> " + sessions3.responseJSON[$(this).attr('id')][0].descripcion);
 
-      {       
-        title: 'S2 Nerja',
-        start: '2017-10-17',
-        color: "#de3527"
-      },
-      {       
-        title: 'S2 Málaga',
-        start: '2017-10-11',
-        color: "#de3527"
-      },
-      {       
-        title: 'S2 Córdoba',
-        start: '2017-10-02',
-        color: "#de3527"
-      },
-      {       
-        title: 'S2 Palma del Río',
-        start: '2017-10-05',
-        color: "#de3527"
-      },      
-      {       
-        title: 'S2 Martos',
-        start: '2017-10-04',
-        color: "#de3527"
-      },
-      {       
-        title: 'S2 Linares',
-        start: '2017-10-09',
-        color: "#de3527"
-      },
-      {       
-        title: 'S2 Granada',
-        start: '2017-10-05',
-        color: "#de3527"
-      },
-      {       
-        title: 'S2 Maracena',
-        start: '2017-10-06',
-        color: "#de3527"
-      },
-      {       
-        title: 'S2 Sevilla',
-        start: '2017-10-10',
-        color: "#de3527"
-      },
-      {       
-        title: 'S2 Huelva',
-        start: '2017-10-02',
-        color: "#de3527"
-      },
-      {       
-        title: 'S2 Ayamonte',
-        start: '2017-10-17',
-        color: "#de3527"
-      },
-      {       
-        title: 'S3 Jerez',
-        start: '2017-10-18',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Cádiz',
-        start: '2017-10-17',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Adra',
-        start: '2017-10-24',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Almería',
-        start: '2017-10-25',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Roquetas de Mar',
-        start: '2017-10-26',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Nerja',
-        start: '2017-11-06',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Málaga',
-        start: '2017-10-26',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Córdoba',
-        start: '2017-10-16',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Palma del Río',
-        start: '2017-10-18',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Martos',
-        start: '2017-10-17',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Linares',
-        start: '2017-10-20',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Granada',
-        start: '2017-10-19',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Maracena',
-        start: '2017-10-18',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Sevilla',
-        start: '2017-11-07',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Huelva',
-        start: '2017-10-23',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S3 Ayamonte',
-        start: '2017-10-31',
-        color: '#479fc7'
-      },
-      {       
-        title: 'S4 Jerez',
-        start: '2017-11-15',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Cádiz',
-        start: '2017-11-16',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Adra',
-        start: '2017-11-14',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Almería',
-        start: '2017-11-15',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Roquetas de Mar',
-        start: '2017-11-16',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Nerja',
-        start: '2017-11-13',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Málaga',
-        start: '2017-11-17',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Córdoba',
-        start: '2017-11-14',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Palma del Río',
-        start: '2017-11-15  ',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Martos',
-        start: '2017-11-14',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Linares',
-        start: '2017-11-13',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Granada',
-        start: '2017-11-14',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Maracena',
-        start: '2017-11-15',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Sevilla',
-        start: '2017-11-15',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Huelva',
-        start: '2017-11-13',
-        color: '#af558f'
-      },
-      {       
-        title: 'S4 Ayamonte',
-        start: '2017-11-14',
-        color: '#af558f'
-      },
-      {       
-        title: 'I Encuentro Andaluz “Gobierno Abierto, Innovación y Participación Ciudadana: Procesos participativos en la Administración Local de Andalucía',
-        start: '2017-11-28',
-        color: '#af558f'
-      },
-      {       
-        start: '2017-11-28',
-        end: '2017-11-29',
-        overlap: false,
-        rendering: 'background',
-        color: '#e5c8db'
-      }         
-      ]
-    });
+
+    if(sessions3.responseJSON[$(this).attr('id')][0].video){
+      if(document.getElementById('video-modalMercado')){
+        $('.modalMercado-video #video-modalMercado').attr("src", sessions3.responseJSON[$(this).attr('id')][0].video);
+      } else { 
+        video = '<div class="embed-responsive embed-responsive-4by3"><iframe src="' + sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].video + '"></iframe></div>';
+        div = document.createElement('div');
+        div.className = "col-md-12 modal-video-ins";
+        div.innerHTML = video;
+        div.id = 'video-modalMercado'
+        document.getElementById('modalMercado-image').appendChild(div);
+      };
+    } else {
+      $('.modalMercado-video #video-modalMercado').parent().parent().remove();
+    }
+
+    $("#modalMercado .modal-body").load(pageName);
+  });
+});  
+</script>
+<script>
+$(function() {
+  sessions = $.getJSON('data/fichas.json');
+  $(".pop").click(function(){
+    var fotografias = sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].fotografias.split(',');
+    var pageTitle = $(this).attr('pageTitle');
+    var pageName = $(this).attr('pageName');
+    $(".modal .modal-title").html("GRUPO MOTOR LOCAL  " + sessions.responseJSON[$(this).attr('id').split('-')[0]][0].municipio.toUpperCase() + " - SESIÓN DE TRABAJO " + $(this).attr('id').split('-')[1]);
+    $(".modal .modal-body .modal-lugar").html("<strong>Lugar del encuentro:</strong> " + sessions.responseJSON[$(this).attr('id').split('-')[0]][0].municipio);
+    $(".modal .modal-body .modal-logo img").attr("src", "images/logos/" + sessions.responseJSON[$(this).attr('id').split('-')[0]][0].logo);
+    $(".modal .modal-body .modal-fecha").html("<strong>Fecha del encuentro:</strong> " + sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].fecha);
+    $(".modal .modal-body .modal-asistentes").html("<strong>Asistentes:</strong> " + sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].asistentes);
+    $(".modal .modal-body .modal-resumen").html("<strong>Resumen:</strong> " + sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].resumen);
+        //$(".modal .modal-body .modal-fotografias").html("Fotografias: " + sessions.responseJSON[$(this).attr('id').split('-')[0]][1][1].fotografias);
+        //$(".modal .modal-body .modal-video").html(sessions.responseJSON[$(this).attr('id').split('-')[0]][1][1].video);
+        if(fotografias.length == 1){
+          $('#carousel-modal #image1-modal').attr("src", 'images/fichas/' + fotografias);
+          $('#carousel-modal #image1-modal').parent().attr('class','item active');
+          $('#image2-modal').parent().remove();
+          $('#image3-modal').parent().remove();
+        } else if(fotografias.length == 2){
+          $('#carousel-modal #image1-modal').attr("src", 'images/fichas/' + fotografias[0]);
+          $('#carousel-modal #image2-modal').attr("src", 'images/fichas/' + fotografias[1]);
+          $('#image3-modal').parent().remove();
+        } else {
+          $('#carousel-modal #image1-modal').attr("src", 'images/fichas/' + fotografias[0]);
+          $('#carousel-modal #image2-modal').attr("src", 'images/fichas/' + fotografias[1]);
+          $('#carousel-modal #image3-modal').attr("src", 'images/fichas/' + fotografias[2]);
+        }
+        if(sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].video){
+          if(document.getElementById('video-modal-ins')){
+            $('.modal-video #video-modal').attr("src", sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].video);
+          } else { 
+            video = '<div class="embed-responsive embed-responsive-4by3"><iframe src="' + sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].video + '"></iframe></div>';
+            div = document.createElement('div');
+            div.className = "col-md-12 modal-video-ins";
+            div.innerHTML = video;
+            div.id = 'video-modal-ins'
+            document.getElementById('modal-fotografias').appendChild(div);
+          };
+        } else {
+          $('.modal-video #video-modal').parent().parent().remove();
+        }
+        $(".modal .modal-body .modal-acta").html("Acta: " + sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].acta);
+        $(".modal .modal-body .modal-area").css({"font-size": "3em", "text-align": "left", "font-style": "normal", "padding-bottom": "50px"});
+        $(".modal .modal-body .modal-partido").html($(this).attr('partido'));
+        $(".modal .modal-body #modal-acta-button").attr('href',sessions.responseJSON[$(this).attr('id').split('-')[0]][$(this).attr('id').split('-')[1]][1].acta);
+
+        $(".modal .modal-body").load(pageName);
+      });
+});  
+$(document).ready(function() {
+
+  $('#calendar').fullCalendar({
+    header: {
+      left: 'prev,next',
+      center: 'title',
+      right: 'month,basicWeek,basicDay,listMonth'
+    },
+    defaultDate: '2017-09-01',
+    locale: 'es',
+    navLinks: true, // can click day/week names to navigate views
+    editable: false,
+    eventLimit: true, // allow "more" link when too many events
+    events: [
+    {
+      title: 'S1 Jerez',
+      start: '2017-09-20',
+      color: "#23864d"
+    },
+    {
+      title: 'S1 Cádiz',
+      start: '2017-09-28',
+      color: "#23864d"
+    },
+    {
+      title: 'S1 Adra',
+      start: '2017-09-19',
+      color: "#23864d"
+    },
+    {
+      title: 'S1 Almería',
+      start: '2017-09-20',
+      color: "#23864d"
+    },
+    {
+      title: 'S1 Roquetas de Mar',
+      start: '2017-09-21',
+      color: "#23864d"
+    },
+    {
+      title: 'S1 Nerja',
+      start: '2017-09-26',
+      color: "#23864d"
+    },
+    {
+      title: 'S1 Málaga',
+      start: '2017-09-27',
+      color: "#23864d"
+    },
+    {
+      title: 'S1 Córdoba',
+      start: '2017-09-25',
+      color: "#23864d"
+    },
+    {
+      title: 'S1 Palma del Río',
+      start: '2017-09-14',
+      color: "#23864d"
+    },
+    {
+      title: 'S1 Martos',
+      start: '2017-09-13',
+      color: "#23864d"
+    },
+    {
+      title: 'S1 Linares',
+      start: '2017-09-18',
+      color: "#23864d"
+    },
+    {
+      title: 'S1 Granada',
+      start: '2017-09-21',
+      color: "#23864d"
+    },
+    {       
+      title: 'S1 Maracena',
+      start: '2017-09-18',
+      color: "#23864d"
+    },
+    {       
+      title: 'S1 Sevilla',
+      start: '2017-09-19',
+      color: "#23864d"
+    },
+    {       
+      title: 'S1 Huelva',
+      start: '2017-09-26',
+      color: "#23864d"
+    },
+    {       
+      title: 'S1 Ayamonte',
+      start: '2017-10-03',
+      color: "#23864d"
+    },
+    {       
+      title: 'S2 Jerez',
+      start: '2017-10-04',
+      color: "#de3527"
+    },
+    {       
+      title: 'S2 Cádiz',
+      start: '2017-10-05',
+      color: "#de3527"
+    },
+    {       
+      title: 'S2 Adra',
+      start: '2017-10-03',
+      color: "#de3527"
+    },
+    {       
+      title: 'S2 Almería',
+      start: '2017-10-18',
+      color: "#de3527"
+    },
+    {       
+      title: 'S2 Roquetas de Mar',
+      start: '2017-10-05',
+      color: "#de3527"
+    },
+
+    {       
+      title: 'S2 Nerja',
+      start: '2017-10-17',
+      color: "#de3527"
+    },
+    {       
+      title: 'S2 Málaga',
+      start: '2017-10-11',
+      color: "#de3527"
+    },
+    {       
+      title: 'S2 Córdoba',
+      start: '2017-10-02',
+      color: "#de3527"
+    },
+    {       
+      title: 'S2 Palma del Río',
+      start: '2017-10-05',
+      color: "#de3527"
+    },      
+    {       
+      title: 'S2 Martos',
+      start: '2017-10-04',
+      color: "#de3527"
+    },
+    {       
+      title: 'S2 Linares',
+      start: '2017-10-09',
+      color: "#de3527"
+    },
+    {       
+      title: 'S2 Granada',
+      start: '2017-10-05',
+      color: "#de3527"
+    },
+    {       
+      title: 'S2 Maracena',
+      start: '2017-10-06',
+      color: "#de3527"
+    },
+    {       
+      title: 'S2 Sevilla',
+      start: '2017-10-10',
+      color: "#de3527"
+    },
+    {       
+      title: 'S2 Huelva',
+      start: '2017-10-02',
+      color: "#de3527"
+    },
+    {       
+      title: 'S2 Ayamonte',
+      start: '2017-10-17',
+      color: "#de3527"
+    },
+    {       
+      title: 'S3 Jerez',
+      start: '2017-10-18',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Cádiz',
+      start: '2017-10-17',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Adra',
+      start: '2017-10-24',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Almería',
+      start: '2017-10-25',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Roquetas de Mar',
+      start: '2017-10-26',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Nerja',
+      start: '2017-11-06',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Málaga',
+      start: '2017-10-26',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Córdoba',
+      start: '2017-10-16',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Palma del Río',
+      start: '2017-10-18',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Martos',
+      start: '2017-10-17',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Linares',
+      start: '2017-10-20',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Granada',
+      start: '2017-10-19',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Maracena',
+      start: '2017-10-18',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Sevilla',
+      start: '2017-11-07',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Huelva',
+      start: '2017-10-23',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S3 Ayamonte',
+      start: '2017-10-31',
+      color: '#479fc7'
+    },
+    {       
+      title: 'S4 Jerez',
+      start: '2017-11-15',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Cádiz',
+      start: '2017-11-16',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Adra',
+      start: '2017-11-14',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Almería',
+      start: '2017-11-15',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Roquetas de Mar',
+      start: '2017-11-16',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Nerja',
+      start: '2017-11-13',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Málaga',
+      start: '2017-11-17',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Córdoba',
+      start: '2017-11-14',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Palma del Río',
+      start: '2017-11-15  ',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Martos',
+      start: '2017-11-14',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Linares',
+      start: '2017-11-13',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Granada',
+      start: '2017-11-14',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Maracena',
+      start: '2017-11-15',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Sevilla',
+      start: '2017-11-15',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Huelva',
+      start: '2017-11-13',
+      color: '#af558f'
+    },
+    {       
+      title: 'S4 Ayamonte',
+      start: '2017-11-14',
+      color: '#af558f'
+    },
+    {       
+      title: 'I Encuentro Andaluz “Gobierno Abierto, Innovación y Participación Ciudadana: Procesos participativos en la Administración Local de Andalucía',
+      start: '2017-11-28',
+      color: '#af558f'
+    },
+    {       
+      start: '2017-11-28',
+      end: '2017-11-29',
+      overlap: false,
+      rendering: 'background',
+      color: '#e5c8db'
+    }         
+    ]
+  });
 
 });
 </script>
 <script type="text/javascript" src="https://s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ONAME';ftypes[3]='text'; /*
- * Translated default messages for the $ validation plugin.
- * Locale: ES
- */
- $.extend($.validator.messages, {
-  required: "Este campo es obligatorio.",
-  remote: "Por favor, rellena este campo.",
-  email: "Por favor, escribe una dirección de correo válida",
+* Translated default messages for the $ validation plugin.
+* Locale: ES
+*/
+$.extend($.validator.messages, {
+required: "Este campo es obligatorio.",
+remote: "Por favor, rellena este campo.",
+email: "Por favor, escribe una dirección de correo válida",
 });}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 
 </html>

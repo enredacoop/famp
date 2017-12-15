@@ -2,6 +2,7 @@
 	[{
 		"municipio": "Martos",
 		"municipio_logo": "martos.png",
+		"fotografia": "martos2.jpg",
 		"nombre": "Foros de participación y recogida de propuestas",
 		"fecha": "1/1/2017",
 		"ambito": "Local",
@@ -26,6 +27,7 @@
 	[{
 		"municipio": "Palma del Río",
 		"municipio_logo": "palma.jpg",
+		"fotografia": "palma2.jpg",
 		"nombre": "Propuestas Ciudadanas para los Presupuestos Municipales y Ordenanzas Fiscales del 2018",
 		"fecha": "9/1/2017",
 		"ambito": "Local",
@@ -44,6 +46,7 @@
 	[{
 		"municipio": "Palma del Río",
 		"municipio_logo": "palma.jpg",
+		"fotografia": "",
 		"nombre": "Propuestas Ciudadanas para los Presupuestos Municipales y Ordenanzas Fiscales del 2018",
 		"fecha": "9/1/2017",
 		"ambito": "Local",
@@ -59,6 +62,7 @@
 	[{
 		"municipio": "Granada",
 		"municipio_logo": "granada.png",
+		"fotografia": "",
 		"nombre": "Diagnóstico Participativo de la situación socioeconómica",
 		"fecha": "5/5/2017",
 		"ambito": "Local",
@@ -71,6 +75,7 @@
 	[{
 		"municipio": "Maracena",
 		"municipio_logo": "maracena.jpg",
+		"fotografia": "maracena.jpg",
 		"nombre": "APP Maracena se mueve ",
 		"fecha": "10/6/2017",
 		"ambito": "Local",
@@ -83,6 +88,7 @@
 	[{
 		"municipio": "Sevilla",
 		"municipio_logo": "sevilla.jpg",
+		"fotografia": "sevilla-edemo.jpg",
 		"nombre": "E-democracia",
 		"fecha": "1/24/2013",
 		"ambito": "Local",
@@ -95,6 +101,7 @@
 	[{
 		"municipio": "Sevilla",
 		"municipio_logo": "sevilla.jpg",
+		"fotografia": "sevilla-decide2.jpg",
 		"nombre": "Decide Sevilla",
 		"fecha": "6/25/2017",
 		"ambito": "Local",
@@ -107,6 +114,7 @@
 	[{
 		"municipio": "Sevilla",
 		"municipio_logo": "sevilla.jpg",
+		"fotografia": "sevilla_010.jpg",
 		"nombre": "010 Línea Sevilla",
 		"fecha": "-",
 		"ambito": "Autonómico",
@@ -119,6 +127,7 @@
 	[{
 		"municipio": "Sevilla",
 		"municipio_logo": "sevilla.jpg",
+		"fotografia": "benalmedena.jpg",
 		"nombre": "Portal de participación y decisión ciudadana en Benalmádena",
 		"fecha": "7/14/2017",
 		"ambito": "Local",
@@ -138,6 +147,7 @@
 	[{
 		"municipio": "Ayamonte",
 		"municipio_logo": "ayamonte.jpg",
+		"fotografia": "ciudades_amigas.jpg",
 		"nombre": "Ciudades Amigas de la Infancia",
 		"fecha": "1/1/2014",
 		"ambito": "Nacional",
@@ -153,10 +163,11 @@
 	[{
 		"municipio": "Ayamonte",
 		"municipio_logo": "ayamonte.jpg",
+		"fotografia": "",
 		"nombre": "Consejo Económico y Social",
 		"fecha": "1/1/2012",
 		"ambito": "Local",
-		"link": "",
+		"link": "#",
 		"tags": "#Consejo #Ayamonte",
 		"image": "https://drive.google.com/open?id=1HQ7VcHa5Xe5P-Ts5RZGwfkd54w7zz2Fi, https://drive.google.com/open?id=1OkmSLdjh7YJ6Yar2jGwyu5PTsrTb5H57",
 		"video": null,
