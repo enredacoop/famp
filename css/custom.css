@@ -189,7 +189,7 @@ h1{
 	background-color: #fff !important;
 	padding-bottom: 55% !important;
 	border-bottom: 2px solid #0c8245 !important;
-}
+}	
 
 #herramientas-main > a:hover, #herramientas-main > a:focus {
 	color: #000 !important;
@@ -659,4 +659,8 @@ padding: 0px;
     /* ie8 workaround - http://louisremi.github.io/background-size-polyfill/ */
     -ms-behavior: url(https://cdn.css-tricks.com/backgroundsize.min.htc);
   
+}
+
+#banco img {
+	padding: 0px 0px 10px 0px;
 }
