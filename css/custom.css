@@ -26,6 +26,11 @@ h1{
 	border-top: 2px solid #3a9ed0;
 }
 
+#mapa hr {
+	margin-top: -3px;
+	border-top: 2px solid #ac5291;	
+}
+
 #encuentro hr{
 	margin-top: -3px;
 	border-top: 2px solid #ac5291;
